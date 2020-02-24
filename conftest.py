@@ -23,17 +23,19 @@ def browser(request):
     if browser_name == "chrome":
         options = ChromeOptions()
         options.headless = True
+        options.add_argument("--kiosk")  # эта штука для mac os, вместо start-maximized (не работало)
         browser = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         options = FirefoxOptions()
         options.headless = True
+        options.add_argument("--kiosk")
         browser = webdriver.Firefox(options=options)
     elif browser_name == "safari":
         browser = webdriver.Safari()
+        browser.fullscreen_window()  # не нашла SafariOptions в библиотеке Selenium
     else:
         raise pytest.UsageError("Undefined --browser_name. Should be 'chrome', 'firefox' or 'safari'")
 
-    # browser.fullscreen_window()  # не работает с chrome
     yield browser
     browser.quit()
 
