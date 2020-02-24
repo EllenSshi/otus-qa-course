@@ -34,4 +34,8 @@ This repository is for learning QA course by OTUS
 
 -----------------------------------------------------------
 
+dz8
 
+Запустить тест: $pytest tests/test_opencart.py [--browser] [--base_url]
+По-умолчанию --browser=chrome, --base_url="http://192.168.56.101/"
+Опция --browser принимает одно из трех значений: chrome, firefox, safari
