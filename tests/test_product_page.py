@@ -50,7 +50,7 @@ def test_send_review(browser, base_url):
 
 def test_add_product_to_cart(browser, base_url):
     """
-    Adds product in amount of 3 to cart and check if successful alert would appear
+    Dz10. Adds product in amount of 3 to cart and check if successful alert would appear
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
