@@ -1,6 +1,9 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz9
+Запустить все тесты: $pytest -v tests/*
+
 # dz8
 Запустить тест: $pytest tests/test_opencart.py [--browser] [--base_url]
 
