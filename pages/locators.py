@@ -20,10 +20,17 @@ class MainPageLocators:
 class ProductPageLocators:
     THUMBNAILS = (By.CSS_SELECTOR, '.thumbnails')
     DESC_AND_REVIEW_TABS = (By.CSS_SELECTOR, '.nav-tabs')
+    DESCRIPTION_TAB = (By.PARTIAL_LINK_TEXT, 'Description')
+    REVIEW_TAB = (By.PARTIAL_LINK_TEXT, 'Reviews')
+    REVIEW_NAME_INPUT = (By.CSS_SELECTOR, '#input-name')
+    REVIEW_TEXT_INPUT = (By.CSS_SELECTOR, '#input-review')
+    REVIEW_RATING_MARKS = (By.CSS_SELECTOR, 'input[name=rating]')
+    REVIEW_BTN = (By.CSS_SELECTOR, '#button-review')
     TAB_CONTENT = (By.CSS_SELECTOR, '.tab-content')
     QUANTITY_INPUT = (By.CSS_SELECTOR, 'input#input-quantity')
     ADD_TO_CART_BTN = (By.CSS_SELECTOR, 'button#button-cart')
     RATING = (By.CSS_SELECTOR, 'div.rating')
+    ALERTS = (By.CSS_SELECTOR, '.alert')
 
 
 class CatalogPageLocators:

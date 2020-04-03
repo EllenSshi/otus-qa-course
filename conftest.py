@@ -15,11 +15,18 @@ def pytest_addoption(parser):
         default="http://192.168.56.101",
         help="Base url of your Opencart application"
     )
+    parser.addoption(
+        "--wait",
+        default=3,
+        type=int,
+        help="Implicity wait for browser"
+    )
 
 
 @pytest.fixture
 def browser(request):
     browser_name = request.config.getoption("--browser")
+    wait = request.config.getoption("--wait")
     if browser_name == "chrome":
         options = ChromeOptions()
         options.headless = True
@@ -36,6 +43,7 @@ def browser(request):
     else:
         raise pytest.UsageError("Undefined --browser_name. Should be 'chrome', 'firefox' or 'safari'")
 
+    browser.implicitly_wait(wait)
     yield browser
     browser.quit()
 
