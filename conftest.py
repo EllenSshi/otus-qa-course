@@ -29,8 +29,8 @@ def browser(request):
     wait = request.config.getoption("--wait")
     if browser_name == "chrome":
         options = ChromeOptions()
-        options.headless = True
-        options.add_argument("--kiosk")  # эта штука для mac os, вместо start-maximized (не работало)
+        options.headless = False
+        # options.add_argument("--kiosk")  # эта штука для mac os, вместо start-maximized (не работало)
         browser = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         options = FirefoxOptions()

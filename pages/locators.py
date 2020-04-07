@@ -50,3 +50,18 @@ class SearchResultsPageLocators:
     SUB_CATEGORY_CHECKBOX = (By.CSS_SELECTOR, 'input[name=sub_category]')
     SEARCH_IN_DESCRIPTION_CHECKBOX = (By.CSS_SELECTOR, 'input#description')
     SEARCH_BTN = (By.CSS_SELECTOR, 'input#button-search')
+
+
+class AdminProductsPage:
+    ADD_NEW_BUTTON = (By.CSS_SELECTOR, 'a[data-original-title="Add New"]')
+    RANDOM_PRODUCT_NAME = (By.CSS_SELECTOR, 'tbody tr > td:nth-child(3)')
+
+
+class AdminAddProductPage:
+    PRODUCT_NAME_INPUT = (By.CSS_SELECTOR, 'input#input-name1')
+    META_TAG_TITLE_INPUT = (By.CSS_SELECTOR, 'input#input-meta-title1')
+    DATA_TAB = (By.CSS_SELECTOR, 'a[href="#tab-data"]')
+    MODEL_INPUT = (By.CSS_SELECTOR, 'input#input-model')
+    PRICE_INPUT = (By.CSS_SELECTOR, 'input#input-price')
+    QUANTITY_INPUT = (By.CSS_SELECTOR, 'input#input-quantity')
+    SAVE_BTN = (By.CSS_SELECTOR, 'button[type=submit]')
