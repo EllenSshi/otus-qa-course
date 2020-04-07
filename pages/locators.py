@@ -54,7 +54,9 @@ class SearchResultsPageLocators:
 
 class AdminProductsPage:
     ADD_NEW_BUTTON = (By.CSS_SELECTOR, 'a[data-original-title="Add New"]')
+    RANDOM_PRODUCT = (By.CSS_SELECTOR, 'tbody tr')
     RANDOM_PRODUCT_NAME = (By.CSS_SELECTOR, 'tbody tr > td:nth-child(3)')
+    DELETE_BUTTON = (By.CSS_SELECTOR, 'button[data-original-title="Delete"]')
 
 
 class AdminAddProductPage:
