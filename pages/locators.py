@@ -59,7 +59,7 @@ class AdminProductsPage:
     DELETE_BUTTON = (By.CSS_SELECTOR, 'button[data-original-title="Delete"]')
 
 
-class AdminAddProductPage:
+class AdminAddAndEditProductPage:
     PRODUCT_NAME_INPUT = (By.CSS_SELECTOR, 'input#input-name1')
     META_TAG_TITLE_INPUT = (By.CSS_SELECTOR, 'input#input-meta-title1')
     DATA_TAB = (By.CSS_SELECTOR, 'a[href="#tab-data"]')

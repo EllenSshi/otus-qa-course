@@ -1,8 +1,10 @@
-from pages.locators import AdminAddProductPage
+from pages.locators import AdminAddAndEditProductPage
 from pages.locators import AdminLoginPageLocators
 from pages.locators import AdminProductsPage
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.alert import Alert
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 def authorization(browser):
@@ -15,13 +17,13 @@ def authorization(browser):
 
 def fill_in_necessary_product_fields(browser, name="Tesla", model="Model Y"):
     product_data = []
-    product_name = browser.find_element(*AdminAddProductPage.PRODUCT_NAME_INPUT)
+    product_name = browser.find_element(*AdminAddAndEditProductPage.PRODUCT_NAME_INPUT)
     product_name.send_keys(name)
     product_data.append(product_name.get_attribute("value"))
-    meta_tag_title = browser.find_element(*AdminAddProductPage.META_TAG_TITLE_INPUT)
+    meta_tag_title = browser.find_element(*AdminAddAndEditProductPage.META_TAG_TITLE_INPUT)
     meta_tag_title.send_keys("mytesla")
-    browser.find_element(*AdminAddProductPage.DATA_TAB).click()
-    product_model = browser.find_element(*AdminAddProductPage.MODEL_INPUT)
+    browser.find_element(*AdminAddAndEditProductPage.DATA_TAB).click()
+    product_model = browser.find_element(*AdminAddAndEditProductPage.MODEL_INPUT)
     product_model.send_keys(model)
     product_data.append(product_model.get_attribute("value"))
     return product_data
@@ -43,13 +45,13 @@ def test_add_new_product(browser, base_url):
     authorization(browser)
     browser.find_element(*AdminProductsPage.ADD_NEW_BUTTON).click()
     product_data = fill_in_necessary_product_fields(browser)
-    price = browser.find_element(*AdminAddProductPage.PRICE_INPUT)
+    price = browser.find_element(*AdminAddAndEditProductPage.PRICE_INPUT)
     price.clear()
     price.send_keys("1000000")
-    quantity = browser.find_element(*AdminAddProductPage.QUANTITY_INPUT)
+    quantity = browser.find_element(*AdminAddAndEditProductPage.QUANTITY_INPUT)
     quantity.clear()
     quantity.send_keys("5")
-    browser.find_element(*AdminAddProductPage.SAVE_BTN).click()
+    browser.find_element(*AdminAddAndEditProductPage.SAVE_BTN).click()
 
     searched_product = search_product_in_table(browser, product_data[0], product_data[1])
 
@@ -60,8 +62,29 @@ def test_edit_product(browser, base_url):
     browser.get(
         base_url + '/opencart/admin/index.php?route=catalog/product&user_token=w2lFNch22HwgP9i00euVDJteZjFt1HyB')
     authorization(browser)
-    products = browser.find_elements(*AdminProductsPage.RANDOM_PRODUCT)
-    print(products.get_property("childNodes")[5].text)
+    # firstly we need to add product we ae going to edit
+    browser.find_element(*AdminProductsPage.ADD_NEW_BUTTON).click()
+    product_data = fill_in_necessary_product_fields(browser, name="some name", model="old model")
+    browser.find_element(*AdminAddAndEditProductPage.SAVE_BTN).click()
+    # secondly we need to find added product
+    searched_product = search_product_in_table(browser, product_data[0], product_data[1])
+    # thirdly we click on edit button of added product and edit product data
+    edit_button = searched_product.get_property("childNodes")[15].get_property("childNodes")[0]
+    edit_button.click()
+    # then we want to edit model and click on save button
+    browser.find_element(*AdminAddAndEditProductPage.DATA_TAB).click()
+    explicit_wait = WebDriverWait(browser, 5)
+    product_model = explicit_wait.until(
+        EC.visibility_of_element_located(AdminAddAndEditProductPage.MODEL_INPUT)
+    )
+    product_model.clear()
+    product_model.send_keys("new model")
+    new_model = product_model.get_attribute("value")
+    browser.find_element(*AdminAddAndEditProductPage.SAVE_BTN).click()
+    # then we want to check whether model of our product was changed
+    edited_product = search_product_in_table(browser, product_data[0], new_model)
+
+    assert edited_product
 
 
 def test_delete_product(browser, base_url):
@@ -72,7 +95,7 @@ def test_delete_product(browser, base_url):
     # firstly we need to add product we ae going to delete
     browser.find_element(*AdminProductsPage.ADD_NEW_BUTTON).click()
     product_data = fill_in_necessary_product_fields(browser, name="test", model="test")
-    browser.find_element(*AdminAddProductPage.SAVE_BTN).click()
+    browser.find_element(*AdminAddAndEditProductPage.SAVE_BTN).click()
     # secondly we need to find added product
     searched_product = search_product_in_table(browser, product_data[0], product_data[1])
     # thirdly we click on checkbox of added product and click on delete button
