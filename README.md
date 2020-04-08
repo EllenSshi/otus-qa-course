@@ -1,6 +1,10 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz11
+Запустить тесты создания, редактирования, удаления продукта: $pytest -v -m=dz11
+Сами тесты лежат в tests/opencart/test_products_page.py
+
 # dz9
 Запустить все тесты: $pytest -v tests/*
 
