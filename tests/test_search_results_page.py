@@ -1,4 +1,4 @@
-from pages.locators import SearchResultsPageLocators
+from pages.SearchResultsPage import SearchResultsPage
 
 
 def test_search_results_page(browser, base_url):
@@ -7,11 +7,9 @@ def test_search_results_page(browser, base_url):
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
-    browser.get(base_url + '/opencart/index.php?route=product/search&search=iphone')
-    browser.find_element(*SearchResultsPageLocators.PRODUCT_SEARCH_BLOCK)
-    browser.find_element(*SearchResultsPageLocators.SEARCH_RESULTS)
-    browser.find_element(*SearchResultsPageLocators.SEARCH_INPUT)
-    browser.find_element(*SearchResultsPageLocators.CATEGORY_SELECT)
-    browser.find_element(*SearchResultsPageLocators.SUB_CATEGORY_CHECKBOX)
-    browser.find_element(*SearchResultsPageLocators.SEARCH_IN_DESCRIPTION_CHECKBOX)
-    browser.find_element(*SearchResultsPageLocators.SEARCH_BTN)
+    # create search_results_page object
+    search_results_page = SearchResultsPage(browser, base_url)
+    # open page
+    search_results_page.open()
+    # find some elements on this page
+    search_results_page.find_elements()
