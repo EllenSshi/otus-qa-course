@@ -1,0 +1,2 @@
+class AdminAddAndEditProductPage:
+    pass
