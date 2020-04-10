@@ -1,4 +1,4 @@
-from pages.locators import MainPageLocators
+from pages.CatalogPage import CatalogPage
 
 
 def test_main_page(browser, base_url):
@@ -7,9 +7,9 @@ def test_main_page(browser, base_url):
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
-    browser.get(base_url + '/opencart/index.php?route=common/home')
-    browser.find_element(*MainPageLocators.SLIDESHOW)
-    browser.find_element(*MainPageLocators.SLIDESHOW_PAGINATION)
-    browser.find_element(*MainPageLocators.FEATURED_BLOCK)
-    browser.find_element(*MainPageLocators.CAROUSEL)
-    browser.find_element(*MainPageLocators.CAROUSEL_PAGINATION)
+    # create main_page object
+    main_page = CatalogPage(browser, base_url)
+    # open page
+    main_page.open()
+    # find some elements on this page
+    main_page.find_elements()
