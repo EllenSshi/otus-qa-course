@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -22,5 +23,13 @@ class BasePage:
     def __element(self, selector: tuple, index: int = 0):
         return self.driver.find_elements(*selector)[index]
 
-    def _wait_for_visibility(self, selector, wait=3):
-        return WebDriverWait(self.driver, wait).until(EC.visibility_of(self.__element(selector)))
+    def _wait_for_visibility(self, selector, index=0, wait=3):
+        return WebDriverWait(self.driver, wait).until(EC.visibility_of(self.__element(selector, index)))
+
+    def _input(self, selector, value, index=0):
+        element = self.__element(selector, index)
+        element.clear()
+        element.send_keys(value)
+
+    def _click(self, selector, index=0):
+        ActionChains(self.driver).move_to_element(self.__element(selector, index)).click().perform()
