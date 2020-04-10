@@ -1,4 +1,4 @@
-from pages.locators import AdminLoginPageLocators
+from pages.AdminLoginPage import AdminLoginPage
 
 
 def test_admin_login_page(browser, base_url):
@@ -7,9 +7,9 @@ def test_admin_login_page(browser, base_url):
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
-    browser.get(base_url + '/opencart/admin/')
-    browser.find_element(*AdminLoginPageLocators.USERNAME_INPUT)
-    browser.find_element(*AdminLoginPageLocators.PASSWORD_INPUT)
-    browser.find_element(*AdminLoginPageLocators.FORGOTTEN_PASSWORD_LINK)
-    browser.find_element(*AdminLoginPageLocators.LOGIN_BTN)
-    browser.find_element(*AdminLoginPageLocators.FOOTER)
+    # create admin_login_page object
+    admin_login_page = AdminLoginPage(browser, base_url)
+    # open page
+    admin_login_page.open()
+    # find some elements on this page
+    admin_login_page.find_elements()
