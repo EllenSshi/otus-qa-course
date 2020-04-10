@@ -3,7 +3,7 @@ This repository is for learning QA course by OTUS
 
 # dz11
 Запустить тесты создания, редактирования, удаления продукта в админке: $pytest -v -m=dz11
-Сами тесты лежат в tests/opencart/test_products_page.py
+Сами тесты лежат в tests/opencartadmin/test_products_page.py
 
 # dz9
 Запустить все тесты: $pytest -v tests/*
