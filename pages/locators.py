@@ -52,14 +52,14 @@ class SearchResultsPageLocators:
     SEARCH_BTN = (By.CSS_SELECTOR, 'input#button-search')
 
 
-class AdminProductsPage:
+class AdminProductsPageLocators:
     ADD_NEW_BUTTON = (By.CSS_SELECTOR, 'a[data-original-title="Add New"]')
     RANDOM_PRODUCT = (By.CSS_SELECTOR, 'tbody tr')
     RANDOM_PRODUCT_NAME = (By.CSS_SELECTOR, 'tbody tr > td:nth-child(3)')
     DELETE_BUTTON = (By.CSS_SELECTOR, 'button[data-original-title="Delete"]')
 
 
-class AdminAddAndEditProductPage:
+class AdminAddAndEditProductPageLocators:
     PRODUCT_NAME_INPUT = (By.CSS_SELECTOR, 'input#input-name1')
     META_TAG_TITLE_INPUT = (By.CSS_SELECTOR, 'input#input-meta-title1')
     DATA_TAB = (By.CSS_SELECTOR, 'a[href="#tab-data"]')

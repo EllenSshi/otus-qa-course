@@ -31,5 +31,13 @@ class BasePage:
         element.clear()
         element.send_keys(value)
 
+    def _get_element_text(self, selector, index=0):
+        element = self.__element(selector, index)
+        return element.get_attribute("value")
+
+    def _press_key(self, selector, key, index=0):
+        element = self.__element(selector, index)
+        element.send_keys(key)
+
     def _click(self, selector, index=0):
         ActionChains(self.driver).move_to_element(self.__element(selector, index)).click().perform()
