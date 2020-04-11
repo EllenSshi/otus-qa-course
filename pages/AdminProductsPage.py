@@ -18,6 +18,7 @@ class AdminProductsPage(BasePage, AdminProductsPageLocators):
     def check_product(self, element):
         checkbox = element.get_property("childNodes")[1].get_property("childNodes")[1]
         checkbox.click()
+        return self
 
     def search_product_in_table(self, name, model):
         products = self.driver.find_elements(*self.RANDOM_PRODUCT)

@@ -1,5 +1,4 @@
 import random
-import time
 
 from pages.ComparisonPage import ComparisonPage
 from pages.ProductPage import ProductPage
@@ -12,7 +11,6 @@ def test_add_to_product_comparison(browser, base_url):
     product_page\
         .click_compare_button()\
         .click_comparison_link()
-    time.sleep(3)
     comparison_page = ComparisonPage(browser, base_url)
 
     assert product_name == comparison_page.get_first_product_name()
