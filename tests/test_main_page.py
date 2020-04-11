@@ -1,4 +1,4 @@
-from pages.CatalogPage import CatalogPage
+from pages.MainPage import MainPage
 
 
 def test_main_page(browser, base_url):
@@ -7,9 +7,7 @@ def test_main_page(browser, base_url):
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
-    # create main_page object
-    main_page = CatalogPage(browser, base_url)
-    # open page
-    main_page.open()
-    # find some elements on this page
-    main_page.find_elements()
+    main_page = MainPage(browser, base_url)
+    main_page\
+        .open()\
+        .check_featured_block_is_not_empty()

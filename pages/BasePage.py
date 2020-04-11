@@ -19,6 +19,7 @@ class BasePage:
 
     def open(self):
         self.driver.get(self.url)
+        return self
 
     def __element(self, selector: tuple, index: int = 0):
         return self.driver.find_elements(*selector)[index]
@@ -41,3 +42,9 @@ class BasePage:
 
     def _click(self, selector, index=0):
         ActionChains(self.driver).move_to_element(self.__element(selector, index)).click().perform()
+
+    def get_current_url(self):
+        return self.driver.current_url
+
+    def check_if_admin_logged_in(self):
+        self._wait_for_visibility(self.USER_ICON)

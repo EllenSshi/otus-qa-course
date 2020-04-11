@@ -6,3 +6,4 @@ from .CatalogPage import CatalogPage
 from .MainPage import MainPage
 from .ProductPage import ProductPage
 from .SearchResultsPage import SearchResultsPage
+from .ComparisonPage import ComparisonPage

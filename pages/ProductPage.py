@@ -5,16 +5,9 @@ from pages.locators import ProductPageLocators
 class ProductPage(BasePage, ProductPageLocators):
     path = '/opencart/index.php?route=product/product&product_id=40'
 
-    def find_elements(self):
-        self._wait_for_visibility(self.THUMBNAILS)
-        self._wait_for_visibility(self.DESC_AND_REVIEW_TABS)
-        self._wait_for_visibility(self.TAB_CONTENT)
-        self._wait_for_visibility(self.QUANTITY_INPUT)
-        self._wait_for_visibility(self.ADD_TO_CART_BTN)
-        self._wait_for_visibility(self.RATING)
-
     def fill_product_quantity(self, quantity: int):
         self._input(self.QUANTITY_INPUT, quantity)
+        return self
 
     def click_add_to_cart(self):
         self._click(self.ADD_TO_CART_BTN)
@@ -22,6 +15,7 @@ class ProductPage(BasePage, ProductPageLocators):
     def click_review_tab(self):
         self._wait_for_visibility(self.REVIEW_TAB)
         self._click(self.REVIEW_TAB)
+        return self
 
     def fill_review_fields(self, review_name, review_text):
         self._wait_for_visibility(self.REVIEW_NAME_INPUT)
@@ -31,6 +25,7 @@ class ProductPage(BasePage, ProductPageLocators):
 
     def click_rating(self, index):
         self._click(self.REVIEW_RATING_MARKS, index)
+        return self
 
     def click_review_button(self):
         self._click(self.REVIEW_BTN)
@@ -38,3 +33,14 @@ class ProductPage(BasePage, ProductPageLocators):
     def get_success_alert(self):
         alert = self._wait_for_visibility(self.ALERTS, 0)
         return alert
+
+    def click_compare_button(self):
+        self._click(self.COMPARE_BTN)
+        return self
+
+    def click_comparison_link(self):
+        self._click(self.COMPARISON_LINK)
+        return self
+
+    def get_product_name(self):
+        return self._get_element_text(self.PRODUCT_NAME)
