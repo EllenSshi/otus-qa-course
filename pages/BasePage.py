@@ -1,17 +1,20 @@
+from abc import abstractmethod
+
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
 
 
-class BasePage:
+class BasePage(BasePageLocators):
     def __init__(self, driver, base_url='http://192.168.56.101'):
         self.driver = driver
         self.base_url = base_url
-        self.__path = ''
 
     @property
+    @abstractmethod
     def path(self):
-        return self.__path
+        return self.path
 
     @property
     def url(self):
