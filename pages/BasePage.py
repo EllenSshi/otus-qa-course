@@ -1,6 +1,7 @@
 from abc import abstractmethod
 
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
@@ -51,3 +52,7 @@ class BasePage(BasePageLocators):
 
     def check_if_admin_logged_in(self):
         self._wait_for_visibility(self.USER_ICON)
+
+    def accept_alert(self, wait=5):
+        WebDriverWait(self.driver, wait).until(EC.alert_is_present())
+        Alert(self.driver).accept()

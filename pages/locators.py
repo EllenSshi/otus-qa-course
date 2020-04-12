@@ -81,6 +81,12 @@ class AdminAddAndEditProductPageLocators:
     PRICE_INPUT = (By.CSS_SELECTOR, 'input#input-price')
     QUANTITY_INPUT = (By.CSS_SELECTOR, 'input#input-quantity')
     SAVE_BTN = (By.CSS_SELECTOR, 'button[type=submit]')
+    IMAGE_TAB = (By.CSS_SELECTOR, 'a[href="#tab-image"]')
+    IMAGE = (By.CSS_SELECTOR, 'a#thumb-image')
+    EDIT_IMAGE_BTN = (By.CSS_SELECTOR, 'button#button-image')
+    UPLOAD_BTN = (By.CSS_SELECTOR, 'button#button-upload')
+    IMAGE_INPUT = (By.CSS_SELECTOR, 'input[type=file]')
+    CLOSE_BTN = (By.CSS_SELECTOR, 'button.close')
 
 
 class ComparisonPageLocators:
