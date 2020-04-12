@@ -1,4 +1,4 @@
-from pages.locators import CatalogPageLocators
+from pages.CatalogPage import CatalogPage
 
 
 def test_catalog_page(browser, base_url):
@@ -7,10 +7,9 @@ def test_catalog_page(browser, base_url):
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
-    browser.get(base_url + '/opencart/index.php?route=product/category&path=20')
-    browser.find_element(*CatalogPageLocators.LIST_GROUP)
-    browser.find_element(*CatalogPageLocators.LIST_BTN)
-    browser.find_element(*CatalogPageLocators.GRID_BTN)
-    browser.find_element(*CatalogPageLocators.COMPARE_LINK)
-    browser.find_element(*CatalogPageLocators.SORT_INPUT)
-    browser.find_element(*CatalogPageLocators.SHOW_INPUT)
+    # create catalog_page object
+    catalog_page = CatalogPage(browser, base_url)
+    # open page
+    catalog_page.open()
+    # find some elements on this page
+    catalog_page.find_elements()
