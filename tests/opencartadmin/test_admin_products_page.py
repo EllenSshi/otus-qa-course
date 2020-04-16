@@ -4,10 +4,10 @@ from pages.AdminLoginPage import AdminLoginPage
 from pages.AdminAddAndEditProductPage import AdminAddAndEditProductPage
 
 
-def login_and_add_new_product(browser, base_url, username, userpassword, pname, ptag, pmodel):
+def login_and_add_new_product(browser, base_url, username, userpassword, pname, ptag, pmodel, logger_fixture):
     data = {}
     admin_products_page = AdminProductsPage(browser, base_url)
-    admin_products_page.open()
+    admin_products_page.open(logger_fixture)
     admin_login_page = AdminLoginPage(browser, base_url)
     admin_login_page.login(username, userpassword)
     data['url_with_token'] = admin_login_page.get_current_url()
@@ -21,8 +21,9 @@ def login_and_add_new_product(browser, base_url, username, userpassword, pname, 
 
 
 @pytest.mark.dz11
-def test_add_new_product(browser, base_url):
-    data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y")
+def test_add_new_product(browser, base_url, logger_fixture):
+    logger_fixture.info("===== test_add_new_product =====")
+    data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y", logger_fixture)
     add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
     add_and_edit_page.upload_image("ModelY.jpg")
     add_and_edit_page.click_save_button()
@@ -33,8 +34,9 @@ def test_add_new_product(browser, base_url):
 
 
 @pytest.mark.dz11
-def test_edit_product(browser, base_url):
-    data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y")
+def test_edit_product(browser, base_url, logger_fixture):
+    logger_fixture.info("===== test_edit_product =====")
+    data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y", logger_fixture)
     add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
     add_and_edit_page.click_save_button()
     browser.get(data['url_with_token'])  # HOW TO GET RID OF IT ???
@@ -49,8 +51,9 @@ def test_edit_product(browser, base_url):
 
 
 @pytest.mark.dz11
-def test_delete_product(browser, base_url):
-    data = login_and_add_new_product(browser, base_url, "admin", "admin", "test", "test", "test")
+def test_delete_product(browser, base_url, logger_fixture):
+    logger_fixture.info("===== test_delete_product =====")
+    data = login_and_add_new_product(browser, base_url, "admin", "admin", "test", "test", "test", logger_fixture)
     add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
     add_and_edit_page.click_save_button()
     browser.get(data['url_with_token'])  # HOW TO GET RID OF IT ???

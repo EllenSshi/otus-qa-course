@@ -1,5 +1,8 @@
+import logging
 from .BasePage import BasePage
 from pages.locators import MainPageLocators
+
+logger = logging.getLogger(__name__)
 
 
 class MainPage(BasePage, MainPageLocators):

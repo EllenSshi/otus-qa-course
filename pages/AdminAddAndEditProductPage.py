@@ -1,8 +1,10 @@
+import logging
 import os
 from selenium.webdriver.common.by import By
-
 from pages.BasePage import BasePage
 from pages.locators import AdminAddAndEditProductPageLocators
+
+logger = logging.getLogger(__name__)
 
 
 class AdminAddAndEditProductPage(BasePage, AdminAddAndEditProductPageLocators):
