@@ -14,6 +14,7 @@ class AdminProductsPage(BasePage, AdminProductsPageLocators):
 
     def click_delete_button(self):
         self._click(self.DELETE_BUTTON)
+        return self
 
     def check_product(self, element):
         checkbox = element.get_property("childNodes")[1].get_property("childNodes")[1]
