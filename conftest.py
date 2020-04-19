@@ -138,6 +138,23 @@ def remote_browser(request):
 
 
 @pytest.fixture
+def browserstack_browser():
+    BROWSERSTACK_URL = 'https://alyonashishkina1:socxM3cpEhSDs4YpMBbe@hub-cloud.browserstack.com/wd/hub'
+    desired_cap = {
+
+        'os': 'Windows',
+        'os_version': '10',
+        'browser': 'Chrome',
+        'browser_version': '80',
+        'name': "alyonashishkina1's First Test"
+
+    }
+    driver = webdriver.Remote(command_executor=BROWSERSTACK_URL, desired_capabilities=desired_cap)
+    yield driver
+    driver.quit()
+
+
+@pytest.fixture
 def base_url(request):
     return request.config.getoption("--base_url")
 
