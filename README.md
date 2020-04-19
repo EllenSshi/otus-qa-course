@@ -1,6 +1,10 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz15 Selenium Grid
+Тесты для запуска в Selenium Grid'е находятся в модуле tests/test_opencart.py
+Скриншоты результатов запусков можно найти в папке seleniumserver/screenshots
+
 # dz14 logging
 Для того, чтобы логи сохранились в файле, указать параметр --logfile="<имя файла>"
 Чтобы логи отобразились в консоли, указать параметр -s

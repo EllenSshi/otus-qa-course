@@ -82,6 +82,11 @@ def pytest_addoption(parser):
         default=None,
         help="File to save logs in"
     )
+    parser.addoption(
+        "--executor",
+        default="192.168.56.1",
+        help="File to save logs in"
+    )
 
 
 @pytest.fixture
@@ -113,6 +118,23 @@ def browser(request):
     if len(browser_logs) > 0:
         logger.warning("There are some errors in browser log!")
     browser.quit()
+
+
+@pytest.fixture
+def remote_browser(request):
+    browser = request.config.getoption("--browser")
+    options = None
+    if browser == "chrome":
+        options = ChromeOptions()
+        options.headless = True
+    elif browser == "firefox":
+        options = FirefoxOptions()
+        options.headless = True
+    executor = request.config.getoption("--executor")
+    wd = webdriver.Remote(command_executor=f"http://{executor}:4444/wd/hub",
+                          desired_capabilities={"browserName": browser}, options=options)
+    request.addfinalizer(wd.quit)
+    return wd
 
 
 @pytest.fixture
