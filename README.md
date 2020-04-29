@@ -2,15 +2,15 @@
 This repository is for learning QA course by OTUS
 
 # dz16 Selenoid
-Тесты для запуска в Selenoid находятся в модуле tests/test_for_selenoid.py
+Тесты для запуска в Selenoid находятся в модуле selenoid/test_for_selenoid.py
 Скриншоты результатов тестов в папке selenoid.
 Был добавлен один новый браузер Chrome и запущены тесты в нем.
 
 # dz15 Selenium Grid
-Тесты для запуска в Selenium Grid'е находятся в модуле tests/test_opencart.py
+Тесты для запуска в Selenium Grid'е находятся в модуле seleniumserver/test_opencart.py
 Скриншоты результатов запусков можно найти в папке seleniumserver/screenshots
 
-Тест для прогона на browserstack.com находится в модуле tests/test_using_browserstack
+Тест для прогона на browserstack.com находится в модуле seleniumserver/test_using_browserstack
 Скриншот можно найти в папке seleniumserver/screenshots/browserstack.png 
 
 # dz14 logging
