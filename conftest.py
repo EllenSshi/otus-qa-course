@@ -1,3 +1,4 @@
+import allure
 import datetime
 import logging
 import sys
@@ -186,4 +187,7 @@ class MyListener(AbstractEventListener):
     def on_exception(self, exception, driver):
         logger.error(exception.msg)
         now = datetime.datetime.now()
-        driver.save_screenshot(f'tests/screenshots/{driver.name} {now}.png')
+        scr_name = driver.name + ' ' + str(now)
+        scr_body = driver.get_screenshot_as_png()
+        # driver.save_screenshot(f'tests/screenshots/{scr_name}.png')
+        allure.attach(name=scr_name, body=scr_body, attachment_type=allure.attachment_type.PNG)

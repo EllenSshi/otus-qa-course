@@ -11,6 +11,7 @@ class AdminLoginPageLocators:
     FORGOTTEN_PASSWORD_LINK = (By.CSS_SELECTOR, 'a[href*=forgotten]')
     LOGIN_BTN = (By.CSS_SELECTOR, 'button[type=submit]')
     FOOTER = (By.CSS_SELECTOR, '#footer')
+    INVALID_AUTH_MSG = (By.XPATH, "//div[contains(text(), 'No match for Username and/or Password')]")
 
 
 class MainPageLocators:

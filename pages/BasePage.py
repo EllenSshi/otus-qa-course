@@ -1,4 +1,4 @@
-import logging
+import allure
 from abc import abstractmethod
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.alert import Alert
@@ -23,9 +23,10 @@ class BasePage(BasePageLocators):
         return self.base_url + self.path
 
     def open(self, logger):
-        self.driver.get(self.url)
-        logger.info(f"Произошел переход на страницу {str(self)} {self.url}")
-        return self
+        with allure.step(f"Go to {self.url}"):
+            self.driver.get(self.url)
+            logger.info(f"Произошел переход на страницу {str(self)} {self.url}")
+            return self
 
     def __element(self, selector: tuple, index: int = None):
         if index:
@@ -37,9 +38,10 @@ class BasePage(BasePageLocators):
         return WebDriverWait(self.driver, wait).until(EC.visibility_of(self.__element(selector, index)))
 
     def _input(self, selector, value, index=None):
-        element = self.__element(selector, index)
-        element.clear()
-        element.send_keys(value)
+        with allure.step(f"Input into {selector} value '{value}'"):
+            element = self.__element(selector, index)
+            element.clear()
+            element.send_keys(value)
 
     def _get_element_text(self, selector, index=None):
         element = self.__element(selector, index)
@@ -50,14 +52,19 @@ class BasePage(BasePageLocators):
         element.send_keys(key)
 
     def _click(self, selector, index=None):
-        ActionChains(self.driver).move_to_element(self.__element(selector, index).wrapped_element).click().perform()
-        # self.__element(selector, index).wrapped_element.click()
+        with allure.step(f"Click on {selector}"):
+            ActionChains(self.driver).move_to_element(self.__element(selector, index).wrapped_element).click().perform()
+            # self.__element(selector, index).wrapped_element.click()
 
     def get_current_url(self):
         return self.driver.current_url
 
+    @allure.step("Check if admin logged in admin part")
     def check_if_admin_logged_in(self):
-        self._wait_for_visibility(self.USER_ICON)
+        try:
+            self._wait_for_visibility(self.USER_ICON)
+        except NoSuchElementException as e:
+            raise AssertionError(e.msg)
 
     def accept_alert(self, wait=5):
         WebDriverWait(self.driver, wait).until(EC.alert_is_present())
