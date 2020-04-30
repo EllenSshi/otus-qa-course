@@ -1,3 +1,4 @@
+import allure
 import logging
 import os
 from selenium.webdriver.common.by import By
@@ -10,6 +11,7 @@ logger = logging.getLogger(__name__)
 class AdminAddAndEditProductPage(BasePage, AdminAddAndEditProductPageLocators):
     path = ''
 
+    @allure.step("Fill in all necessary product fields")
     def fill_in_necessary_product_fields(self, name, tag, model):
         product_data = []
         self._input(self.PRODUCT_NAME_INPUT, name)
@@ -20,9 +22,11 @@ class AdminAddAndEditProductPage(BasePage, AdminAddAndEditProductPageLocators):
         product_data.append(self._get_element_text(self.MODEL_INPUT))
         return product_data
 
+    @allure.step("Click 'save' button")
     def click_save_button(self):
         self._click(self.SAVE_BTN)
 
+    @allure.step("Edit model of product and return new model name")
     def edit_model(self, value):
         self._click(self.DATA_TAB)
         self._wait_for_visibility(self.MODEL_INPUT)
@@ -31,6 +35,7 @@ class AdminAddAndEditProductPage(BasePage, AdminAddAndEditProductPageLocators):
         self.click_save_button()
         return new_model
 
+    @allure.step("Upload photo for product")
     def upload_image(self, file):
         dirname = os.path.dirname(__file__)
         filename = os.path.join(dirname, file)

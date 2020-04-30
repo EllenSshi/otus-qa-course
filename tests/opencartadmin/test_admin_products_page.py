@@ -1,9 +1,11 @@
+import allure
 import pytest
 from pages.AdminProductsPage import AdminProductsPage
 from pages.AdminLoginPage import AdminLoginPage
 from pages.AdminAddAndEditProductPage import AdminAddAndEditProductPage
 
 
+@allure.step("Log in and add new product")
 def login_and_add_new_product(browser, base_url, username, userpassword, pname, ptag, pmodel, logger_fixture):
     data = {}
     admin_products_page = AdminProductsPage(browser, base_url)
@@ -20,6 +22,9 @@ def login_and_add_new_product(browser, base_url, username, userpassword, pname, 
     return data
 
 
+@allure.feature("Work with products list")
+@allure.story("Add new product")
+@allure.title("Add new product with valid data")
 @pytest.mark.dz11
 def test_add_new_product(browser, base_url, logger_fixture):
     logger_fixture.info("===== test_add_new_product =====")
@@ -33,6 +38,9 @@ def test_add_new_product(browser, base_url, logger_fixture):
     assert searched_product
 
 
+@allure.feature("Work with products list")
+@allure.story("Edit product")
+@allure.title("Edit product with valid data")
 @pytest.mark.dz11
 def test_edit_product(browser, base_url, logger_fixture):
     logger_fixture.info("===== test_edit_product =====")
@@ -50,6 +58,9 @@ def test_edit_product(browser, base_url, logger_fixture):
     assert edited_product
 
 
+@allure.feature("Work with products list")
+@allure.story("Delete product")
+@allure.title("Delete product from table")
 @pytest.mark.dz11
 def test_delete_product(browser, base_url, logger_fixture):
     logger_fixture.info("===== test_delete_product =====")

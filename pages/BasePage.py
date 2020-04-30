@@ -48,8 +48,9 @@ class BasePage(BasePageLocators):
         return element.get_attribute("value")
 
     def _press_key(self, selector, key, index=None):
-        element = self.__element(selector, index)
-        element.send_keys(key)
+        with allure.step(f"Press key {key} into field {selector}"):
+            element = self.__element(selector, index)
+            element.send_keys(key)
 
     def _click(self, selector, index=None):
         with allure.step(f"Click on {selector}"):
@@ -66,6 +67,7 @@ class BasePage(BasePageLocators):
         except NoSuchElementException as e:
             raise AssertionError(e.msg)
 
+    @allure.step("Accpet alert")
     def accept_alert(self, wait=5):
         WebDriverWait(self.driver, wait).until(EC.alert_is_present())
         Alert(self.driver).accept()

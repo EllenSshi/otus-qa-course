@@ -1,6 +1,8 @@
+import allure
 from pages.CatalogPage import CatalogPage
 
 
+@allure.title("Main page")
 def test_catalog_page(browser, base_url, logger_fixture):
     """
     Dz9. Just finding of elements on the catalog page
