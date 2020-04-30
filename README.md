@@ -1,6 +1,10 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz17 Allure
+Файлы отчета Allure находятся в папке allure_report.
+Скриншоты отчета находятся в папке allure_screenshots.
+
 # dz16 Selenoid
 Тесты для запуска в Selenoid находятся в модуле selenoid/test_for_selenoid.py
 Скриншоты результатов тестов в папке selenoid.
