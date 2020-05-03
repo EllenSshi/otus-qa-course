@@ -1,6 +1,9 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz18 Log Analysis
+Лог access.log и скрипт его анализа находятся в папке log_analysis.
+
 # dz17 Allure
 Файлы отчета Allure находятся в папке allure_report.
 Скриншоты отчета находятся в папке allure_screenshots.
