@@ -1,0 +1,8 @@
+[
+    {
+        "file": "log_analysis/test.log"
+    },
+    {
+        "file": "log_analysis/access.log"
+    }
+]
