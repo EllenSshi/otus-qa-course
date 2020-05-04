@@ -1,13 +1,16 @@
 import allure
 import datetime
 import logging
+import mysql.connector
 import sys
+import time
 
 import pytest
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions, FirefoxOptions
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.support.events import EventFiringWebDriver, AbstractEventListener
+from sshtunnel import SSHTunnelForwarder
 
 logger = logging.getLogger("driver")
 logger.setLevel(logging.INFO)
@@ -88,6 +91,34 @@ def pytest_addoption(parser):
         default="127.0.0.1"
     )
 
+@pytest.fixture
+def db_cursor():
+    server = SSHTunnelForwarder(
+        '192.168.56.101',
+        ssh_username='user',
+        ssh_password='admin',
+        remote_bind_address=('127.0.0.1', 3306)
+    )
+    server.start()
+
+    config = {
+        "user": "user",
+        "password": "123",
+        "host": "127.0.0.1",
+        "port": server.local_bind_port,
+        "database": "opencart"
+    }
+    time.sleep(3)
+    connection = mysql.connector.connect(**config)
+    connection.autocommit = True
+    db_cursor = connection.cursor()
+    yield db_cursor
+    db_cursor.close()
+    connection.close()
+    server.stop()
+    if db_cursor and connection:
+        db_cursor.close()
+        connection.close()
 
 @pytest.fixture
 def browser(request):
