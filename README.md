@@ -1,6 +1,14 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz22 OS Linux with Python
+Результат работы в модуле os_linux_and_python/test_os.py
+Запустить скрипт: python os_linux_and_python/test_os.py
+Параметры: --dir [путь/до/директории/с/файлами/для/пункта/10/задания].
+По-умолчанию используется текущая директория otus-qa-course.
+--package [имя пакета версию которого хотим узнать, для пункта 9 задания]
+По-умолчанию используется модуль argparse.
+
 # dz20 Paramiko/SSH
 Результат работы в модуле ssh_paramiko/test_server_access.py
 

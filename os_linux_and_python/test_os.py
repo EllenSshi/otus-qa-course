@@ -5,7 +5,7 @@ import sys
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dir", type=str, help="Path to directory where to look for files")
+parser.add_argument("--dir", default=".", type=str, help="Path to directory where to look for files")
 parser.add_argument("--package", default="argparse", type=str, help="Name of package to define the version of")
 args = parser.parse_args()
 
@@ -14,6 +14,12 @@ args = parser.parse_args()
 def get_ifconfig_info():
     ifconfig = subprocess.check_output(["ifconfig"], universal_newlines=True)
     print(ifconfig)
+
+
+# 2. Маршрут по умолчанию
+def get_default_route():
+    def_route = subprocess.check_output(["route", "get", "default"], universal_newlines=True)
+    print(f"\n# 2. Default route is:\n{def_route}")
 
 
 # 3. Информацию о состоянии процессора
@@ -25,10 +31,25 @@ def processor_info():
     print(proc_info[8])
 
 
+# 4. Информацию о процессе
+def get_process_info():
+    process_info = subprocess.check_output(["ps", "aux", "|grep", "bash"], shell=True, universal_newlines=True)
+    print(f"\n# 4. Bash process info:\n{process_info}")
+
+
 # 5. Список всех процессов
 def get_processes_list():
     print("\n# 5. List of processes are: ")
     print(subprocess.call("ps"))
+
+
+# 6. Статистику работы сетевых интерфейсов
+# 7. Статус работы какого либо сервиса
+
+# 8. Состояние сетевого порта на сервере (TCP или UDP)
+def get_tcp_info():
+    tcp_info = subprocess.check_output(["netstat", "-ap", "tcp", "-n"], universal_newlines=True)
+    print(f"\n# 8. TCP info: {tcp_info}")
 
 
 # 9. Версию пакета (имя пакета передается как аргумент)
@@ -45,7 +66,8 @@ def get_file_list():
     if os.path.exists(dir_name):
         print(f"\n# 10. List of files for directory: {dir_name}")
         for file in os.listdir(dir_name):
-            print(file)
+            if os.path.isfile(file):
+                print(file)
     else:
         print("Such directory doesn't exist")
 
@@ -67,30 +89,13 @@ def get_os_version():
 
 if __name__ == "__main__":
     get_ifconfig_info()
+    get_default_route()
     processor_info()
+    get_process_info()
     get_processes_list()
+    get_tcp_info()
     get_package_version()
     get_file_list()
     get_current_directory()
     get_core_version()
     get_os_version()
-
-
-# Написать Python скрипт и тесты, которые показывают и проверяют:
-
-# 2. Маршрут по умолчанию
-
-# 4. Информацию о процессе
-
-# 6. Статистику работы сетевых интерфейсов
-# 7. Статус работы какого либо сервиса
-# 8. Состояние сетевого порта на сервере (TCP или UDP)
-
-
-
-
-
-#
-# Условия:
-# Пользоваться только модулями subprocess, os, system и bash внутри subprocess, так же можно читать данные из файловой системы /proc
-# Для запуска скрипта необходимо использовать модуль argparse
