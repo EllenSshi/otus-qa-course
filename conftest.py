@@ -84,8 +84,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--executor",
-        default="192.168.56.1",
-        help="File to save logs in"
+        default="127.0.0.1"
     )
 
 
@@ -126,13 +125,19 @@ def remote_browser(request):
     options = None
     if browser == "chrome":
         options = ChromeOptions()
-        options.headless = True
+        options.headless = False
     elif browser == "firefox":
         options = FirefoxOptions()
-        options.headless = True
+        options.headless = False
     executor = request.config.getoption("--executor")
     wd = webdriver.Remote(command_executor=f"http://{executor}:4444/wd/hub",
-                          desired_capabilities={"browserName": browser}, options=options)
+                          desired_capabilities={
+                              "browserName": browser,
+                              "version": "50.0",
+                              "enableVnc": True,
+                              "enableVideo": True
+                          },
+                          options=options)
     request.addfinalizer(wd.quit)
     return wd
 
