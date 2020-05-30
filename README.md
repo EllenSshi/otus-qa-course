@@ -1,6 +1,9 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz20 Paramiko/SSH
+Результат работы в модуле ssh_paramiko/test_server_access.py
+
 # dz19 Database using
 Результат работы в папке tests/opencartadmin.
 В тестовом модуле test_admin_products_page.py создана новая функция add_new_product_through_db().

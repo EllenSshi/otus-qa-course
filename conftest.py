@@ -120,6 +120,7 @@ def db_cursor():
         db_cursor.close()
         connection.close()
 
+
 @pytest.fixture
 def browser(request):
     logger.info("Browser start..")
