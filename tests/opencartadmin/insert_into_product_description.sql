@@ -1,0 +1,1 @@
+INSERT into oc_product_description (product_id, language_id, name, meta_title) VALUES (%s, 1, %s, 'tag');

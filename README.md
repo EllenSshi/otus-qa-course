@@ -1,6 +1,12 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz19 Database using
+Результат работы в папке tests/opencartadmin.
+В тестовом модуле test_admin_products_page.py создана новая функция add_new_product_through_db().
+Используется для добавления продукта через базу для теста редактирования продукта.
+В тест удаления продукта добавлена проверка, что удаленного продукта действительно нет в бд.
+
 # dz18 Log Analysis
 Лог access.log и скрипт его анализа находятся в папке log_analysis.
 

@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from pages.AdminProductsPage import AdminProductsPage
@@ -42,19 +44,27 @@ def test_add_new_product(browser, base_url, logger_fixture):
 @allure.story("Edit product")
 @allure.title("Edit product with valid data")
 @pytest.mark.dz11
-def test_edit_product(browser, base_url, logger_fixture):
+def test_edit_product(browser, base_url, logger_fixture, db_cursor):
     logger_fixture.info("===== test_edit_product =====")
-    data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y", logger_fixture)
-    add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
-    add_and_edit_page.click_save_button()
-    browser.get(data['url_with_token'])  # HOW TO GET RID OF IT ???
+    # data = login_and_add_new_product(browser, base_url, "admin", "admin", "Tesla", "mytag", "Model Y", logger_fixture)
+    # add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
+    # add_and_edit_page.click_save_button()
+    name = "fooname"
+    model = "foomodel"
+    add_new_product_through_db(db_cursor, name, model)
     admin_products_page = AdminProductsPage(browser, base_url)
-    searched_product = admin_products_page.search_product_in_table(data['pname'], data['pmodel'])
+    admin_products_page.open(logger_fixture)
+    admin_login_page = AdminLoginPage(browser, base_url)
+    admin_login_page.login("admin", "admin")
+    url_with_token = admin_login_page.get_current_url()
+
+    searched_product = admin_products_page.search_product_in_table(name, model)
     admin_products_page.click_edit_button(searched_product)
     add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
-    new_model = add_and_edit_page.edit_model("new model")
-    browser.get(data['url_with_token'])  # HOW TO GET RID OF IT ???
-    edited_product = admin_products_page.search_product_in_table(data['pname'], new_model)
+    new_model = "new model"
+    add_and_edit_page.edit_model(new_model)
+    browser.get(url_with_token)  # HOW TO GET RID OF IT ???
+    edited_product = admin_products_page.search_product_in_table(name, new_model)
     assert edited_product
 
 
@@ -62,7 +72,7 @@ def test_edit_product(browser, base_url, logger_fixture):
 @allure.story("Delete product")
 @allure.title("Delete product from table")
 @pytest.mark.dz11
-def test_delete_product(browser, base_url, logger_fixture):
+def test_delete_product(browser, base_url, logger_fixture, db_cursor):
     logger_fixture.info("===== test_delete_product =====")
     data = login_and_add_new_product(browser, base_url, "admin", "admin", "test", "test", "test", logger_fixture)
     add_and_edit_page = AdminAddAndEditProductPage(browser, base_url)
@@ -76,3 +86,20 @@ def test_delete_product(browser, base_url, logger_fixture):
         .accept_alert()
     deleted_product = admin_products_page.search_product_in_table(data['pname'], data['pmodel'])
     assert deleted_product is None
+
+    # проверка, что удаленного продукта нет в базе данных
+    with open('select_product.sql', 'r') as script:
+        db_cursor.execute(script.read(), (data['pname'], data['pmodel']))
+    assert not db_cursor.fetchall()
+
+
+def add_new_product_through_db(db_cursor, name, model):
+    with open('insert_into_product.sql', 'r') as script:
+        db_cursor.execute(script.read(), (model,))
+
+    script = "Select * from oc_product where oc_product.model=%s"
+    db_cursor.execute(script, (model,))
+    product_id = db_cursor.fetchone()[0]
+
+    with open('insert_into_product_description.sql', 'r') as script:
+        db_cursor.execute(script.read(), (product_id, name))
