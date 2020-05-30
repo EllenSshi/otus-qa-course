@@ -4,9 +4,10 @@ from pages.ComparisonPage import ComparisonPage
 from pages.ProductPage import ProductPage
 
 
-def test_add_to_product_comparison(browser, base_url):
+def test_add_to_product_comparison(browser, base_url, logger_fixture):
+    logger_fixture.info("===== test_add_to_product_comparison =====")
     product_page = ProductPage(browser, base_url)
-    product_page.open()
+    product_page.open(logger_fixture)
     product_name = product_page.get_product_name()
     product_page\
         .click_compare_button()\
@@ -16,15 +17,16 @@ def test_add_to_product_comparison(browser, base_url):
     assert product_name == comparison_page.get_first_product_name()
 
 
-def test_send_review(browser, base_url):
+def test_send_review(browser, base_url, logger_fixture):
     """
     dz10. Sends review about product and checks if successful alert would appear
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
+    logger_fixture.info("===== test_send_review =====")
     product_page = ProductPage(browser, base_url)
     product_page\
-        .open()\
+        .open(logger_fixture)\
         .click_review_tab()\
         .fill_review_fields("Name", "This is my first review ever")
     rating = random.randint(0, 4)
@@ -37,15 +39,16 @@ def test_send_review(browser, base_url):
                          "It has been submitted to the webmaster for approval."
 
 
-def test_add_product_to_cart(browser, base_url):
+def test_add_product_to_cart(browser, base_url, logger_fixture):
     """
     Dz10. Adds product in random amount to cart and check if successful alert would appear
     :param browser: fixture from conftest.py
     :param base_url: fixture from conftest.py
     """
+    logger_fixture.info("===== test_add_product_to_cart =====")
     product_page = ProductPage(browser, base_url)
     product_page\
-        .open()\
+        .open(logger_fixture)\
         .fill_product_quantity(random.randint(1, 5))\
         .click_add_to_cart()
     alert = product_page.get_success_alert()

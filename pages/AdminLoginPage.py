@@ -1,7 +1,9 @@
+import logging
 from .BasePage import BasePage
 from pages.locators import AdminLoginPageLocators
 from pages.locators import BasePageLocators
-from selenium.webdriver.common.keys import Keys
+
+logger = logging.getLogger(__name__)
 
 
 class AdminLoginPage(BasePage, AdminLoginPageLocators, BasePageLocators):

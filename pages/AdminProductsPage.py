@@ -1,5 +1,8 @@
+import logging
 from pages.BasePage import BasePage
 from pages.locators import AdminProductsPageLocators
+
+logger = logging.getLogger(__name__)
 
 
 class AdminProductsPage(BasePage, AdminProductsPageLocators):
@@ -10,7 +13,7 @@ class AdminProductsPage(BasePage, AdminProductsPageLocators):
 
     def click_edit_button(self, element):
         edit_button = element.get_property("childNodes")[15].get_property("childNodes")[0]
-        edit_button.click()
+        edit_button.wrapped_element.click()
 
     def click_delete_button(self):
         self._click(self.DELETE_BUTTON)
