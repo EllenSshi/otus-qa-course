@@ -1,6 +1,8 @@
+import allure
 from pages.MainPage import MainPage
 
 
+@allure.title("Main page")
 def test_main_page(browser, base_url, logger_fixture):
     """
     Dz9. Just finding of elements on the main page
