@@ -1,6 +1,19 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz18 Log Analysis
+Лог access.log и скрипт его анализа находятся в папке log_analysis.
+
+Чтобы запустить скрипт анализа логов, необходимо выполнить python log_analysis/log_analysis.py -f=путь/до/файла/с/логами
+или -f=путь/до/директории/с/файлами/логов.
+Примеры:
+- python log_analysis/log_analysis.py -f=log_analysis/
+или
+- python log_analysis/log_analysis.py -f=log_analysis/access.log
+
+Скрипт создаст json-файл log_analysis_results.json в директории log_analysis/
+с результатами анализа по каждому файлу, если их несколько.
+
 # dz17 Allure
 Файлы отчета Allure находятся в папке allure_report.
 Скриншоты отчета находятся в папке allure_screenshots.

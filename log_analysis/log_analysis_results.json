@@ -1,0 +1,290 @@
+[
+    {
+        "file": "log_analysis/one.log",
+        "GET": 3,
+        "POST": 1,
+        "PUT": 1,
+        "DELETE": 1,
+        "HEAD": 1,
+        "OPTIONS": 0,
+        "top_10_ips": [
+            "192.168.56.1",
+            "192.168.56.101"
+        ],
+        "top_10_long_reqs": [
+            {
+                "method": "HEAD",
+                "url": "http://192.168.56.101/opencart/admin/view/javascript/font-awesome/css/font-awesome.min.css",
+                "ip": "192.168.56.1",
+                "time": "77423"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/admin/",
+                "ip": "192.168.56.1",
+                "time": "66464"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/index.php?route=product/product&product_id=36&search=iphone&description=true",
+                "ip": "192.168.56.1",
+                "time": "66463"
+            },
+            {
+                "method": "PUT",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.101",
+                "time": "10097"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "7391"
+            },
+            {
+                "method": "DELETE",
+                "url": "http://192.168.56.101/opencart/index.php?route=product/product&product_id=36&search=iphone&description=true",
+                "ip": "192.168.56.101",
+                "time": "3380"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/admin/",
+                "ip": "192.168.56.1",
+                "time": "492"
+            }
+        ],
+        "top_10_client_error_reqs": [
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/admin/",
+                "status": "404",
+                "ip": "192.168.56.1"
+            }
+        ],
+        "top_10_server_error_reqs": [
+            {
+                "method": "DELETE",
+                "url": "http://192.168.56.101/opencart/index.php?route=product/product&product_id=36&search=iphone&description=true",
+                "status": "500",
+                "ip": "192.168.56.101"
+            },
+            {
+                "method": "PUT",
+                "url": "http://192.168.56.101/opencart/",
+                "status": "500",
+                "ip": "192.168.56.101"
+            }
+        ],
+        "total_number_of_requests": 7
+    },
+    {
+        "file": "log_analysis/access.log",
+        "GET": 25106,
+        "POST": 770,
+        "PUT": 0,
+        "DELETE": 0,
+        "HEAD": 0,
+        "OPTIONS": 898,
+        "top_10_ips": [
+            "192.168.56.1",
+            "192.168.56.101",
+            "192.168.56.12",
+            "192.168.56.13",
+            "192.168.56.14",
+            "192.168.56.15",
+            "192.168.56.16",
+            "192.168.56.17",
+            "192.168.56.18",
+            "192.168.56.19"
+        ],
+        "top_10_long_reqs": [
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "138640"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "138639"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/index.php?route=common/home",
+                "ip": "192.168.56.1",
+                "time": "138639"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "138639"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "138638"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.1",
+                "time": "138638"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.101",
+                "time": "138638"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.101",
+                "time": "138638"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.101",
+                "time": "138638"
+            },
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/",
+                "ip": "192.168.56.101",
+                "time": "138638"
+            }
+        ],
+        "top_10_client_error_reqs": [
+            {
+                "method": "GET",
+                "url": "http://192.168.56.101/opencart/install/index.php",
+                "status": "404",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "",
+                "url": "-",
+                "status": "408",
+                "ip": "192.168.56.1"
+            }
+        ],
+        "top_10_server_error_reqs": [
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=n9n9NM0Wo42j0tYKurKCiRhF0qaD7d1t",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=iMBv02f7EEimsTnbOITREjf1SukNZ9Qg",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=OSZyHY0yFNmlykbrLRFhDXtIrETHWDps",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=wtxINvyzy7gBnBxAhqmx4FTTHWtX5103",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=h1wzAmOQ2el8lkxGvV5bzunC4JAA21W2",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=h1wzAmOQ2el8lkxGvV5bzunC4JAA21W2",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=w2lFNch22HwgP9i00euVDJteZjFt1HyB",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=w2lFNch22HwgP9i00euVDJteZjFt1HyB",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=w2lFNch22HwgP9i00euVDJteZjFt1HyB",
+                "status": "500",
+                "ip": "192.168.56.1"
+            },
+            {
+                "method": "POST",
+                "url": "http://192.168.56.101/opencart/admin/index.php?route=catalog/product/add&user_token=w2lFNch22HwgP9i00euVDJteZjFt1HyB&page=1",
+                "status": "500",
+                "ip": "192.168.56.1"
+            }
+        ],
+        "total_number_of_requests": 27095
+    }
+]
