@@ -1,12 +1,11 @@
-FROM ubuntu:latest
+FROM python:3.7
 
 WORKDIR /mydir
 
 COPY . .
 
 RUN apt-get update
-RUN apt-get install python3 -y
 RUN apt-get install python3-pip -y
 RUN pip3 install -r requirements.txt
 
-CMD ["pytest", "ssh_paramiko/", "-v"]
+CMD ["pytest", "tests/", "-v", "--ignore=tests/opencartadmin"]

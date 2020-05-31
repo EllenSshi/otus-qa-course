@@ -1,0 +1,27 @@
+version: '3'
+services:
+  selenoid:
+    network_mode: bridge
+    ports:
+      - "4444:4444"
+    image: aerokube/selenoid:1.10.0
+    volumes:
+      - "$PWD/selenoid:/etc/selenoid"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$PWD/selenoid/video:/opt/selenoid/video"
+      - "$PWD/selenoid/logs:/opt/selenoid/logs"
+  selenoidui:
+    network_mode: bridge
+    image: aerokube/selenoid-ui:1.10.0
+    links:
+      - selenoid
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri","http://selenoid:4444"]
+  tests:
+    network_mode: bridge
+    links:
+      - selenoid
+    image: my_img_with_tests:1.0
+    depends_on:
+      - selenoid

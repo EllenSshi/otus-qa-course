@@ -36,8 +36,8 @@ This repository is for learning QA course by OTUS
 Скриншоты отчета находятся в папке allure_screenshots.
 
 # dz16 Selenoid
-Тесты для запуска в Selenoid находятся в модуле selenoid/test_for_selenoid.py
-Скриншоты результатов тестов в папке selenoid.
+Тесты для запуска в Selenoid находятся в модуле selenoid_1/test_for_selenoid.py
+Скриншоты результатов тестов в папке selenoid_1.
 Был добавлен один новый браузер Chrome и запущены тесты в нем.
 
 # dz15 Selenium Grid

@@ -88,7 +88,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--executor",
-        default="127.0.0.1"
+        default="selenoid"
     )
 
 @pytest.fixture
