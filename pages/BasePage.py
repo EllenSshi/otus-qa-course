@@ -54,7 +54,7 @@ class BasePage(BasePageLocators):
 
     def _click(self, selector, index=None):
         with allure.step(f"Click on {selector}"):
-            ActionChains(self.driver).move_to_element(self.__element(selector, index).wrapped_element).click().perform()
+            ActionChains(self.driver).move_to_element(self.__element(selector, index)).click().perform()
             # self.__element(selector, index).wrapped_element.click()
 
     def get_current_url(self):

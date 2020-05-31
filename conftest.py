@@ -166,9 +166,9 @@ def remote_browser(request):
     wd = webdriver.Remote(command_executor=f"http://{executor}:4444/wd/hub",
                           desired_capabilities={
                               "browserName": browser,
-                              "version": "50.0",
+                              "version": "81.0",
                               "enableVnc": True,
-                              "enableVideo": True
+                              "enableVideo": False
                           },
                           options=options)
     request.addfinalizer(wd.quit)
