@@ -72,7 +72,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--base_url",
-        default="http://192.168.56.101",
+        default="http://172.17.0.1",
         help="Base url of your Opencart application"
     )
     parser.addoption(
@@ -168,7 +168,8 @@ def remote_browser(request):
                               "browserName": browser,
                               "version": "81.0",
                               "enableVnc": True,
-                              "enableVideo": False
+                              "enableVideo": False,
+                              "enableLog": True
                           },
                           options=options)
     request.addfinalizer(wd.quit)

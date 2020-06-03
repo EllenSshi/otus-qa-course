@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 class SearchResultsPage(BasePage, SearchResultsPageLocators):
-    path = '/opencart/index.php?route=product/search&search=iphone'
+    path = '/index.php?route=product/search&search=iphone'
 
     def find_elements(self):
         self._wait_for_visibility(self.PRODUCT_SEARCH_BLOCK)

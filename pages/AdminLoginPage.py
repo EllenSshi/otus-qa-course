@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class AdminLoginPage(BasePage, AdminLoginPageLocators, BasePageLocators):
-    path = '/opencart/admin/'
+    path = '/admin/'
 
     @allure.step("Sign in admin part")
     def login(self, username, password):

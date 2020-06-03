@@ -1,4 +1,5 @@
 import allure
+import time
 from pages.AdminLoginPage import AdminLoginPage
 
 
@@ -9,10 +10,10 @@ from pages.AdminLoginPage import AdminLoginPage
 def test_admin_login(remote_browser, base_url, logger_fixture):
     logger_fixture.info("===== test_admin_login =====")
     admin_login_page = AdminLoginPage(remote_browser, base_url)
-    admin_login_page\
-        .open(logger_fixture)\
-        .login("admin", "admin")\
-        .check_if_admin_logged_in()
+    admin_login_page.open(logger_fixture)
+    admin_login_page.login("user", "bitnami1")
+    time.sleep(5)
+    admin_login_page.check_if_admin_logged_in()
 
 
 @allure.severity(allure.severity_level.CRITICAL)

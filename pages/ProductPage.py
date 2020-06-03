@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 class ProductPage(BasePage, ProductPageLocators):
-    path = '/opencart/index.php?route=product/product&product_id=40'
+    path = '/index.php?route=product/product&product_id=40'
 
     @allure.step("Fill product quantity")
     def fill_product_quantity(self, quantity: int):

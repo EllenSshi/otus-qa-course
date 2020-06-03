@@ -5,7 +5,8 @@
             "81.0": {
                 "image": "selenoid/vnc_chrome:81.0",
                 "port": "4444",
-                "path": "/"
+                "path": "/",
+                "hosts" : ["localhost:172.17.0.1"]
             }
         }
     }
