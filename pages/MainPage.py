@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 class MainPage(BasePage, MainPageLocators):
-    path = '/opencart/'
+    path = '/'
 
     @allure.step("Check if featured block of main page is not empy")
     def check_featured_block_is_not_empty(self):

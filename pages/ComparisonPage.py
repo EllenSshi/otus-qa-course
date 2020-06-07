@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 class ComparisonPage(BasePage, ComparisonPageLocators):
-    path = '/opencart/index.php?route=product/compare'
+    path = '/index.php?route=product/compare'
 
     @allure.step("Get name of the first product on this page")
     def get_first_product_name(self):

@@ -72,7 +72,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--base_url",
-        default="http://192.168.56.101",
+        default="http://172.17.0.1",
         help="Base url of your Opencart application"
     )
     parser.addoption(
@@ -88,7 +88,7 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--executor",
-        default="127.0.0.1"
+        default="selenoid"
     )
 
 @pytest.fixture
@@ -166,9 +166,10 @@ def remote_browser(request):
     wd = webdriver.Remote(command_executor=f"http://{executor}:4444/wd/hub",
                           desired_capabilities={
                               "browserName": browser,
-                              "version": "50.0",
+                              "version": "81.0",
                               "enableVnc": True,
-                              "enableVideo": True
+                              "enableVideo": False,
+                              "enableLog": True
                           },
                           options=options)
     request.addfinalizer(wd.quit)

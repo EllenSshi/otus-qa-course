@@ -1,6 +1,12 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz23 Docker/Docker-compose
+1) Собрать docker image командой "docker build -t my_img_with_tests:latest ."
+2) Запустить контейнеры с Opencart и Selenoid + SelenoidUi командой "docker-compose up -d"
+3) Перезапустить тесты и посмотреть лог запуска можно командой 
+"docker-compose restart tests && docker logs -f otus-qa-course_tests_1"
+
 # dz22 OS Linux with Python
 Результат работы в модуле os_linux_and_python/test_os.py
 Запустить скрипт: python os_linux_and_python/test_os.py
@@ -36,8 +42,8 @@ This repository is for learning QA course by OTUS
 Скриншоты отчета находятся в папке allure_screenshots.
 
 # dz16 Selenoid
-Тесты для запуска в Selenoid находятся в модуле selenoid/test_for_selenoid.py
-Скриншоты результатов тестов в папке selenoid.
+Тесты для запуска в Selenoid находятся в модуле selenoid_1/test_for_selenoid.py
+Скриншоты результатов тестов в папке selenoid_1.
 Был добавлен один новый браузер Chrome и запущены тесты в нем.
 
 # dz15 Selenium Grid

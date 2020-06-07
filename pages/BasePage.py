@@ -9,7 +9,7 @@ from .locators import BasePageLocators
 
 
 class BasePage(BasePageLocators):
-    def __init__(self, driver, base_url='http://192.168.56.101'):
+    def __init__(self, driver, base_url='http://172.17.0.1'):
         self.driver = driver
         self.base_url = base_url
 
@@ -34,7 +34,7 @@ class BasePage(BasePageLocators):
         else:
             return self.driver.find_element(*selector)
 
-    def _wait_for_visibility(self, selector, index=None, wait=3):
+    def _wait_for_visibility(self, selector, index=None, wait=10):
         return WebDriverWait(self.driver, wait).until(EC.visibility_of(self.__element(selector, index)))
 
     def _input(self, selector, value, index=None):
@@ -54,7 +54,7 @@ class BasePage(BasePageLocators):
 
     def _click(self, selector, index=None):
         with allure.step(f"Click on {selector}"):
-            ActionChains(self.driver).move_to_element(self.__element(selector, index).wrapped_element).click().perform()
+            ActionChains(self.driver).move_to_element(self.__element(selector, index)).click().perform()
             # self.__element(selector, index).wrapped_element.click()
 
     def get_current_url(self):
