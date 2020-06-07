@@ -8,4 +8,4 @@ RUN apt-get update && \
     apt-get install python3-pip -y && \
     pip3 install -r requirements.txt
 
-CMD ["pytest", "-v", "--alluredir=allure_report"]
+CMD ["pytest", "tests_for_running_in_jenkins/", "-v", "--alluredir=allure_report"]
