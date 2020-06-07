@@ -1,6 +1,8 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz24 Jenkins
+
 # dz23 Docker/Docker-compose
 1) Собрать docker image командой "docker build -t my_img_with_tests:latest ."
 2) Запустить контейнеры с Opencart и Selenoid + SelenoidUi командой "docker-compose up -d"
