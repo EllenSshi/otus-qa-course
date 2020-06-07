@@ -1,0 +1,10 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_main_page.py:12 ===== test_main_page =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.MainPage.MainPage object at 0x109361af0> http://192.168.56.101/opencart/
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: .image
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: .image
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: .caption
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: .caption
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: .button-group
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: .button-group
+[32mINFO    [0m driver:conftest.py:185 Driver quit

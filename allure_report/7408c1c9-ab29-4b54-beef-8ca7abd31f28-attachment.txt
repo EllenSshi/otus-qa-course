@@ -1,0 +1,16 @@
+30.04.2020 11:34:23 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:34:31 INFO driver test_catalog_page.py:12 ===== test_catalog_page =====
+30.04.2020 11:34:40 INFO driver BasePage.py:28 Произошел переход на страницу <pages.CatalogPage.CatalogPage object at 0x1093437c0> http://192.168.56.101/opencart/index.php?route=product/category&path=20
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: .list-group
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: .list-group
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: button#list-view
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: button#list-view
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: button#grid-view
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: button#grid-view
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: a#compare-total
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: a#compare-total
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: select#input-sort
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: select#input-sort
+30.04.2020 11:34:40 INFO driver conftest.py:179 Find element by: css selector, value: select#input-limit
+30.04.2020 11:34:40 INFO driver conftest.py:182 Element was found by: css selector, value: select#input-limit
+30.04.2020 11:34:41 INFO driver conftest.py:185 Driver quit

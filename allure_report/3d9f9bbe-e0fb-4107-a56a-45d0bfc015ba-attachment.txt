@@ -1,0 +1,8 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_search_results_page.py:27 ===== test_products_displayed_as_grid =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.SearchResultsPage.SearchResultsPage object at 0x10938a190> http://192.168.56.101/opencart/index.php?route=product/search&search=iphone
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: button#grid-view
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: button#grid-view
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: div.product-grid
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: div.product-grid
+[32mINFO    [0m driver:conftest.py:185 Driver quit

@@ -1,0 +1,12 @@
+30.04.2020 11:34:58 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:35:15 INFO driver test_product_page.py:12 ===== test_add_to_product_comparison =====
+30.04.2020 11:35:27 INFO driver BasePage.py:28 Произошел переход на страницу <pages.ProductPage.ProductPage object at 0x1093a2c40> http://192.168.56.101/opencart/index.php?route=product/product&product_id=40
+30.04.2020 11:35:27 INFO driver conftest.py:179 Find element by: css selector, value: div ~ h1
+30.04.2020 11:35:29 INFO driver conftest.py:182 Element was found by: css selector, value: div ~ h1
+30.04.2020 11:35:29 INFO driver conftest.py:179 Find element by: css selector, value: button[data-original-title="Compare this Product"]
+30.04.2020 11:35:29 INFO driver conftest.py:182 Element was found by: css selector, value: button[data-original-title="Compare this Product"]
+30.04.2020 11:35:30 INFO driver conftest.py:179 Find element by: link text, value: product comparison
+30.04.2020 11:35:31 INFO driver conftest.py:182 Element was found by: link text, value: product comparison
+30.04.2020 11:35:32 INFO driver conftest.py:179 Find element by: css selector, value: table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) strong
+30.04.2020 11:35:33 INFO driver conftest.py:182 Element was found by: css selector, value: table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) strong
+30.04.2020 11:35:33 INFO driver conftest.py:185 Driver quit

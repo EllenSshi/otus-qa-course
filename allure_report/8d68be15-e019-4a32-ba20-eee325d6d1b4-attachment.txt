@@ -1,0 +1,8 @@
+30.04.2020 11:36:59 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:37:17 INFO driver test_search_results_page.py:27 ===== test_products_displayed_as_grid =====
+30.04.2020 11:37:23 INFO driver BasePage.py:28 Произошел переход на страницу <pages.SearchResultsPage.SearchResultsPage object at 0x10938a190> http://192.168.56.101/opencart/index.php?route=product/search&search=iphone
+30.04.2020 11:37:24 INFO driver conftest.py:179 Find element by: css selector, value: button#grid-view
+30.04.2020 11:37:24 INFO driver conftest.py:182 Element was found by: css selector, value: button#grid-view
+30.04.2020 11:37:24 INFO driver conftest.py:179 Find element by: css selector, value: div.product-grid
+30.04.2020 11:37:24 INFO driver conftest.py:182 Element was found by: css selector, value: div.product-grid
+30.04.2020 11:37:25 INFO driver conftest.py:185 Driver quit

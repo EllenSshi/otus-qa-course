@@ -1,0 +1,17 @@
+30.04.2020 11:29:26 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:29:50 INFO driver test_admin_login_page.py:9 ===== test_admin_login =====
+30.04.2020 11:30:06 INFO driver BasePage.py:28 Произошел переход на страницу <pages.AdminLoginPage.AdminLoginPage object at 0x109298a00> http://192.168.56.101/opencart/admin/
+30.04.2020 11:30:06 INFO driver conftest.py:179 Find element by: css selector, value: input#input-username
+30.04.2020 11:30:06 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-username
+30.04.2020 11:30:06 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:30:09 INFO driver conftest.py:170 Value of element input was changed with <admin>
+30.04.2020 11:30:09 INFO driver conftest.py:179 Find element by: css selector, value: input#input-password
+30.04.2020 11:30:09 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-password
+30.04.2020 11:30:09 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:30:10 INFO driver conftest.py:170 Value of element input was changed with <admin>
+30.04.2020 11:30:10 INFO driver conftest.py:179 Find element by: css selector, value: button[type=submit]
+30.04.2020 11:30:10 INFO driver conftest.py:182 Element was found by: css selector, value: button[type=submit]
+30.04.2020 11:30:17 INFO driver conftest.py:179 Find element by: css selector, value: img#user-profile
+30.04.2020 11:30:17 INFO driver conftest.py:182 Element was found by: css selector, value: img#user-profile
+30.04.2020 11:30:17 WARNING driver conftest.py:119 There are some errors in browser log!
+30.04.2020 11:30:18 INFO driver conftest.py:185 Driver quit

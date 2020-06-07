@@ -1,0 +1,17 @@
+30.04.2020 11:33:59 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:34:10 INFO driver test_admin_login_page.py:21 ===== test_admin_login =====
+30.04.2020 11:34:20 INFO driver BasePage.py:28 Произошел переход на страницу <pages.AdminLoginPage.AdminLoginPage object at 0x109358820> http://192.168.56.101/opencart/admin/
+30.04.2020 11:34:20 INFO driver conftest.py:179 Find element by: css selector, value: input#input-username
+30.04.2020 11:34:20 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-username
+30.04.2020 11:34:20 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:34:20 INFO driver conftest.py:170 Value of element input was changed with <admin>
+30.04.2020 11:34:20 INFO driver conftest.py:179 Find element by: css selector, value: input#input-password
+30.04.2020 11:34:21 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-password
+30.04.2020 11:34:21 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:34:21 INFO driver conftest.py:170 Value of element input was changed with <a123>
+30.04.2020 11:34:21 INFO driver conftest.py:179 Find element by: css selector, value: button[type=submit]
+30.04.2020 11:34:21 INFO driver conftest.py:182 Element was found by: css selector, value: button[type=submit]
+30.04.2020 11:34:22 INFO driver conftest.py:179 Find element by: xpath, value: //div[contains(text(), 'No match for Username and/or Password')]
+30.04.2020 11:34:22 INFO driver conftest.py:182 Element was found by: xpath, value: //div[contains(text(), 'No match for Username and/or Password')]
+30.04.2020 11:34:22 WARNING driver conftest.py:119 There are some errors in browser log!
+30.04.2020 11:34:23 INFO driver conftest.py:185 Driver quit

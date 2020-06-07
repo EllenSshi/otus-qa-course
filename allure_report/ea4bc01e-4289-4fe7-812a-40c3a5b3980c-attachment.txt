@@ -1,0 +1,54 @@
+30.04.2020 11:30:45 INFO driver conftest.py:94 Browser start..
+30.04.2020 11:31:04 INFO driver test_admin_products_page.py:30 ===== test_add_new_product =====
+30.04.2020 11:31:10 INFO driver BasePage.py:28 Произошел переход на страницу <pages.AdminProductsPage.AdminProductsPage object at 0x109360c10> http://192.168.56.101/opencart/admin/index.php?route=catalog/product
+30.04.2020 11:31:10 INFO driver conftest.py:179 Find element by: css selector, value: input#input-username
+30.04.2020 11:31:10 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-username
+30.04.2020 11:31:10 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:31:11 INFO driver conftest.py:170 Value of element input was changed with <admin>
+30.04.2020 11:31:11 INFO driver conftest.py:179 Find element by: css selector, value: input#input-password
+30.04.2020 11:31:11 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-password
+30.04.2020 11:31:11 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:31:11 INFO driver conftest.py:170 Value of element input was changed with <admin>
+30.04.2020 11:31:11 INFO driver conftest.py:179 Find element by: css selector, value: button[type=submit]
+30.04.2020 11:31:11 INFO driver conftest.py:182 Element was found by: css selector, value: button[type=submit]
+30.04.2020 11:31:14 INFO driver conftest.py:179 Find element by: css selector, value: a[data-original-title="Add New"]
+30.04.2020 11:31:14 INFO driver conftest.py:182 Element was found by: css selector, value: a[data-original-title="Add New"]
+30.04.2020 11:31:18 INFO driver conftest.py:179 Find element by: css selector, value: input#input-name1
+30.04.2020 11:31:18 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-name1
+30.04.2020 11:31:18 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:31:19 INFO driver conftest.py:170 Value of element input was changed with <Tesla>
+30.04.2020 11:31:19 INFO driver conftest.py:179 Find element by: css selector, value: input#input-name1
+30.04.2020 11:31:19 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-name1
+30.04.2020 11:31:19 INFO driver conftest.py:179 Find element by: css selector, value: input#input-meta-title1
+30.04.2020 11:31:19 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-meta-title1
+30.04.2020 11:31:19 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:31:19 INFO driver conftest.py:170 Value of element input was changed with <mytag>
+30.04.2020 11:31:19 INFO driver conftest.py:179 Find element by: css selector, value: a[href="#tab-data"]
+30.04.2020 11:31:19 INFO driver conftest.py:182 Element was found by: css selector, value: a[href="#tab-data"]
+30.04.2020 11:31:20 INFO driver conftest.py:179 Find element by: css selector, value: input#input-model
+30.04.2020 11:31:20 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-model
+30.04.2020 11:31:20 INFO driver conftest.py:170 Value of element input was changed with <>
+30.04.2020 11:31:20 INFO driver conftest.py:170 Value of element input was changed with <Model Y>
+30.04.2020 11:31:20 INFO driver conftest.py:179 Find element by: css selector, value: input#input-model
+30.04.2020 11:31:20 INFO driver conftest.py:182 Element was found by: css selector, value: input#input-model
+30.04.2020 11:31:21 INFO driver conftest.py:179 Find element by: css selector, value: a[href="#tab-image"]
+30.04.2020 11:31:21 INFO driver conftest.py:182 Element was found by: css selector, value: a[href="#tab-image"]
+30.04.2020 11:31:21 INFO driver conftest.py:179 Find element by: css selector, value: a#thumb-image
+30.04.2020 11:31:21 INFO driver conftest.py:182 Element was found by: css selector, value: a#thumb-image
+30.04.2020 11:31:21 INFO driver conftest.py:179 Find element by: css selector, value: button#button-image
+30.04.2020 11:31:21 INFO driver conftest.py:182 Element was found by: css selector, value: button#button-image
+30.04.2020 11:31:22 INFO driver conftest.py:179 Find element by: css selector, value: button#button-upload
+30.04.2020 11:31:23 INFO driver conftest.py:182 Element was found by: css selector, value: button#button-upload
+30.04.2020 11:31:31 INFO driver conftest.py:179 Find element by: css selector, value: input[type=file]
+30.04.2020 11:31:31 INFO driver conftest.py:182 Element was found by: css selector, value: input[type=file]
+30.04.2020 11:31:32 INFO driver conftest.py:170 Value of element input was changed with <C:\fakepath\ModelY.jpg>
+30.04.2020 11:31:34 INFO driver conftest.py:179 Find element by: css selector, value: a[href$="ModelY.jpg"]
+30.04.2020 11:31:34 INFO driver conftest.py:182 Element was found by: css selector, value: a[href$="ModelY.jpg"]
+30.04.2020 11:31:34 INFO driver conftest.py:179 Find element by: css selector, value: a[href$="ModelY.jpg"]
+30.04.2020 11:31:35 INFO driver conftest.py:182 Element was found by: css selector, value: a[href$="ModelY.jpg"]
+30.04.2020 11:31:35 INFO driver conftest.py:179 Find element by: css selector, value: button[type=submit]
+30.04.2020 11:31:35 INFO driver conftest.py:182 Element was found by: css selector, value: button[type=submit]
+30.04.2020 11:31:42 INFO driver conftest.py:179 Find element by: css selector, value: tbody tr
+30.04.2020 11:31:42 INFO driver conftest.py:182 Element was found by: css selector, value: tbody tr
+30.04.2020 11:31:44 WARNING driver conftest.py:119 There are some errors in browser log!
+30.04.2020 11:31:44 INFO driver conftest.py:185 Driver quit

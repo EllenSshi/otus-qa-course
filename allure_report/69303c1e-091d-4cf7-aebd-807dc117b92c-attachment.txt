@@ -1,0 +1,17 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_admin_login_page.py:21 ===== test_admin_login =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.AdminLoginPage.AdminLoginPage object at 0x109358820> http://192.168.56.101/opencart/admin/
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: input#input-username
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: input#input-username
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <>
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <admin>
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: input#input-password
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: input#input-password
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <>
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <a123>
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: button[type=submit]
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: button[type=submit]
+[32mINFO    [0m driver:conftest.py:179 Find element by: xpath, value: //div[contains(text(), 'No match for Username and/or Password')]
+[32mINFO    [0m driver:conftest.py:182 Element was found by: xpath, value: //div[contains(text(), 'No match for Username and/or Password')]
+[33mWARNING [0m driver:conftest.py:119 There are some errors in browser log!
+[32mINFO    [0m driver:conftest.py:185 Driver quit

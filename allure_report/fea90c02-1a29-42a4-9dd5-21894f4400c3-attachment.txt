@@ -1,0 +1,12 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_product_page.py:12 ===== test_add_to_product_comparison =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.ProductPage.ProductPage object at 0x1093a2c40> http://192.168.56.101/opencart/index.php?route=product/product&product_id=40
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: div ~ h1
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: div ~ h1
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: button[data-original-title="Compare this Product"]
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: button[data-original-title="Compare this Product"]
+[32mINFO    [0m driver:conftest.py:179 Find element by: link text, value: product comparison
+[32mINFO    [0m driver:conftest.py:182 Element was found by: link text, value: product comparison
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) strong
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) strong
+[32mINFO    [0m driver:conftest.py:185 Driver quit

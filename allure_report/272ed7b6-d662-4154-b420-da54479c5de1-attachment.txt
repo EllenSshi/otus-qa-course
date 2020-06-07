@@ -1,0 +1,12 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_product_page.py:59 ===== test_add_product_to_cart =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.ProductPage.ProductPage object at 0x1093963d0> http://192.168.56.101/opencart/index.php?route=product/product&product_id=40
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: input#input-quantity
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: input#input-quantity
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <>
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <1>
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: button#button-cart
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: button#button-cart
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: .alert
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: .alert
+[32mINFO    [0m driver:conftest.py:185 Driver quit

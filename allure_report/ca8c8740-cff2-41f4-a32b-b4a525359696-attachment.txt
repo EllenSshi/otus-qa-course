@@ -1,0 +1,26 @@
+[32mINFO    [0m driver:conftest.py:94 Browser start..
+[32mINFO    [0m driver:test_product_page.py:34 ===== test_send_review =====
+[32mINFO    [0m driver:BasePage.py:28 Произошел переход на страницу <pages.ProductPage.ProductPage object at 0x1093a0130> http://192.168.56.101/opencart/index.php?route=product/product&product_id=40
+[32mINFO    [0m driver:conftest.py:179 Find element by: partial link text, value: Reviews
+[32mINFO    [0m driver:conftest.py:182 Element was found by: partial link text, value: Reviews
+[32mINFO    [0m driver:conftest.py:179 Find element by: partial link text, value: Reviews
+[32mINFO    [0m driver:conftest.py:182 Element was found by: partial link text, value: Reviews
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: #input-name
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: #input-name
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: #input-name
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: #input-name
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <>
+[32mINFO    [0m driver:conftest.py:170 Value of element input was changed with <Name>
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: #input-review
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: #input-review
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: #input-review
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: #input-review
+[32mINFO    [0m driver:conftest.py:170 Value of element textarea was changed with <>
+[32mINFO    [0m driver:conftest.py:170 Value of element textarea was changed with <This is my first review ever>
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: input[name=rating]
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: input[name=rating]
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: #button-review
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: #button-review
+[32mINFO    [0m driver:conftest.py:179 Find element by: css selector, value: .alert
+[32mINFO    [0m driver:conftest.py:182 Element was found by: css selector, value: .alert
+[32mINFO    [0m driver:conftest.py:185 Driver quit
