@@ -1,6 +1,10 @@
 # otus-qa-course
 This repository is for learning QA course by OTUS
 
+# dz26 Robotframework
+1) Запустить BDD-тесты можно командой $ robot robotframework/
+2) Лог запуска - log.html, стандартный отчет запуска - report.html
+
 # dz23 Docker/Docker-compose
 1) Собрать docker image командой "docker build -t my_img_with_tests:latest ."
 2) Запустить контейнеры с Opencart и Selenoid + SelenoidUi командой "docker-compose up -d"
