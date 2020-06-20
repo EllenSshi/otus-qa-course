@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.0 on darwin)" generated="20200620 18:42:53.792" rpa="false">
+<suite id="s1" name="Robotframework" source="/Users/alex/Documents/OTUS_Alyona/otus-qa-course/robotframework">
+<suite id="s1-s1" name="Adm Part Opencart" source="/Users/alex/Documents/OTUS_Alyona/otus-qa-course/robotframework/adm_part_opencart.robot">
+<test id="s1-s1-t1" name="Admin can open Opencart administrative part in Chrome">
+<kw name="Открыть административную часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ADMIN_URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:42:54.228" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/admin/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:42:54.227" endtime="20200620 18:42:58.496"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Авторизация</arg>
+</arguments>
+<msg timestamp="20200620 18:42:58.505" level="INFO">Page title is 'Авторизация'.</msg>
+<status status="PASS" starttime="20200620 18:42:58.497" endtime="20200620 18:42:58.505"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:54.225" endtime="20200620 18:42:58.506"></status>
+</kw>
+<kw name="Авторизоваться в административной части опенкарт" library="opencart_keywords">
+<arguments>
+<arg>demo</arg>
+<arg>demo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-username</arg>
+<arg>${LOGIN}</arg>
+</arguments>
+<msg timestamp="20200620 18:42:58.508" level="INFO">Typing text 'demo' into text field 'css:input#input-username'.</msg>
+<status status="PASS" starttime="20200620 18:42:58.508" endtime="20200620 18:42:58.698"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200620 18:42:58.698" level="INFO">Typing text 'demo' into text field 'css:input#input-password'.</msg>
+<status status="PASS" starttime="20200620 18:42:58.698" endtime="20200620 18:42:58.825"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200620 18:42:58.827" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200620 18:42:58.826" endtime="20200620 18:42:59.473"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:58.506" endtime="20200620 18:42:59.473"></status>
+</kw>
+<kw name="Проверить что администратор авторизован" library="opencart_keywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Панель состояния</arg>
+</arguments>
+<msg timestamp="20200620 18:42:59.484" level="INFO">Page title is 'Панель состояния'.</msg>
+<status status="PASS" starttime="20200620 18:42:59.474" endtime="20200620 18:42:59.484"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:59.474" endtime="20200620 18:42:59.484"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:42:59.485" endtime="20200620 18:42:59.641"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:59.484" endtime="20200620 18:42:59.642"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:54.221" endtime="20200620 18:42:59.643" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="User can not login into Opencart administrative part">
+<kw name="Открыть административную часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ADMIN_URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:42:59.653" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/admin/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:42:59.653" endtime="20200620 18:43:03.703"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Авторизация</arg>
+</arguments>
+<msg timestamp="20200620 18:43:03.712" level="INFO">Page title is 'Авторизация'.</msg>
+<status status="PASS" starttime="20200620 18:43:03.704" endtime="20200620 18:43:03.712"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:59.648" endtime="20200620 18:43:03.712"></status>
+</kw>
+<kw name="Авторизоваться в административной части опенкарт" library="opencart_keywords">
+<arguments>
+<arg>demo</arg>
+<arg>badpassword</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-username</arg>
+<arg>${LOGIN}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:03.714" level="INFO">Typing text 'demo' into text field 'css:input#input-username'.</msg>
+<status status="PASS" starttime="20200620 18:43:03.714" endtime="20200620 18:43:03.891"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:03.892" level="INFO">Typing text 'badpassword' into text field 'css:input#input-password'.</msg>
+<status status="PASS" starttime="20200620 18:43:03.892" endtime="20200620 18:43:04.055"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:04.056" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200620 18:43:04.055" endtime="20200620 18:43:04.389"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:03.713" endtime="20200620 18:43:04.389"></status>
+</kw>
+<kw name="Проверить что авторизации в административную часть не произошло" library="opencart_keywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://div[contains(text(), ' Такой логин и/или пароль не существует!')]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:04.436" level="INFO">Element 'xpath://div[contains(text(), ' Такой логин и/или пароль не существует!')]' is displayed.</msg>
+<status status="PASS" starttime="20200620 18:43:04.391" endtime="20200620 18:43:04.436"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:04.390" endtime="20200620 18:43:04.436"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:04.437" endtime="20200620 18:43:04.683"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:04.437" endtime="20200620 18:43:04.683"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:42:59.645" endtime="20200620 18:43:04.684" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Search for order by order number">
+<kw name="Открыть административную часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ADMIN_URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:04.690" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/admin/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:04.689" endtime="20200620 18:43:08.724"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Авторизация</arg>
+</arguments>
+<msg timestamp="20200620 18:43:08.733" level="INFO">Page title is 'Авторизация'.</msg>
+<status status="PASS" starttime="20200620 18:43:08.725" endtime="20200620 18:43:08.733"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:04.687" endtime="20200620 18:43:08.733"></status>
+</kw>
+<kw name="Авторизоваться в административной части опенкарт" library="opencart_keywords">
+<arguments>
+<arg>demo</arg>
+<arg>demo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-username</arg>
+<arg>${LOGIN}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:08.735" level="INFO">Typing text 'demo' into text field 'css:input#input-username'.</msg>
+<status status="PASS" starttime="20200620 18:43:08.735" endtime="20200620 18:43:08.914"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:08.915" level="INFO">Typing text 'demo' into text field 'css:input#input-password'.</msg>
+<status status="PASS" starttime="20200620 18:43:08.914" endtime="20200620 18:43:09.070"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:09.070" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200620 18:43:09.070" endtime="20200620 18:43:09.777"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:08.734" endtime="20200620 18:43:09.778"></status>
+</kw>
+<kw name="Перейти в список заказов" library="opencart_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[href='#collapse26']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:09.780" level="INFO">Clicking element 'css:a[href='#collapse26']'.</msg>
+<status status="PASS" starttime="20200620 18:43:09.779" endtime="20200620 18:43:09.988"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#collapse26 a[href*='sale/order']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:09.989" level="INFO">Clicking element 'css:#collapse26 a[href*='sale/order']'.</msg>
+<status status="PASS" starttime="20200620 18:43:09.989" endtime="20200620 18:43:10.567"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css:h1</arg>
+<arg>Заказы</arg>
+</arguments>
+<msg timestamp="20200620 18:43:10.568" level="INFO">Verifying element 'css:h1' contains exact text 'Заказы'.</msg>
+<status status="PASS" starttime="20200620 18:43:10.567" endtime="20200620 18:43:10.603"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:09.778" endtime="20200620 18:43:10.603"></status>
+</kw>
+<kw name="Поиск по номеру заказа" library="opencart_keywords">
+<arguments>
+<arg>270</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:#input-order-id</arg>
+<arg>${ORDER_ID}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:10.605" level="INFO">Typing text '270' into text field 'css:#input-order-id'.</msg>
+<status status="PASS" starttime="20200620 18:43:10.604" endtime="20200620 18:43:10.734"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#button-filter</arg>
+</arguments>
+<msg timestamp="20200620 18:43:10.735" level="INFO">Clicking element 'css:#button-filter'.</msg>
+<status status="PASS" starttime="20200620 18:43:10.735" endtime="20200620 18:43:11.205"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:10.603" endtime="20200620 18:43:11.206"></status>
+</kw>
+<kw name="Проверить что заказ с таким номером нашелся" library="opencart_keywords">
+<arguments>
+<arg>270</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css:#form-order tbody&gt;tr&gt;td:nth-child(2)</arg>
+<arg>${ORDER_ID}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:11.209" level="INFO">Verifying element 'css:#form-order tbody&gt;tr&gt;td:nth-child(2)' contains exact text '270'.</msg>
+<status status="PASS" starttime="20200620 18:43:11.208" endtime="20200620 18:43:11.249"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:11.206" endtime="20200620 18:43:11.249"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:11.250" endtime="20200620 18:43:11.409"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:11.249" endtime="20200620 18:43:11.409"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:04.685" endtime="20200620 18:43:11.410" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="User can not add manufacturer">
+<kw name="Открыть административную часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ADMIN_URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:11.417" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/admin/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:11.416" endtime="20200620 18:43:15.460"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Авторизация</arg>
+</arguments>
+<msg timestamp="20200620 18:43:15.469" level="INFO">Page title is 'Авторизация'.</msg>
+<status status="PASS" starttime="20200620 18:43:15.461" endtime="20200620 18:43:15.469"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:11.414" endtime="20200620 18:43:15.470"></status>
+</kw>
+<kw name="Авторизоваться в административной части опенкарт" library="opencart_keywords">
+<arguments>
+<arg>demo</arg>
+<arg>demo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-username</arg>
+<arg>${LOGIN}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:15.472" level="INFO">Typing text 'demo' into text field 'css:input#input-username'.</msg>
+<status status="PASS" starttime="20200620 18:43:15.471" endtime="20200620 18:43:15.655"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:15.656" level="INFO">Typing text 'demo' into text field 'css:input#input-password'.</msg>
+<status status="PASS" starttime="20200620 18:43:15.655" endtime="20200620 18:43:15.780"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:15.781" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200620 18:43:15.780" endtime="20200620 18:43:16.434"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:15.470" endtime="20200620 18:43:16.434"></status>
+</kw>
+<kw name="Перейти в список производителей" library="opencart_keywords">
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200620 18:43:16.436" endtime="20200620 18:43:16.439"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[href='#collapse1']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:16.440" level="INFO">Clicking element 'css:a[href='#collapse1']'.</msg>
+<status status="PASS" starttime="20200620 18:43:16.439" endtime="20200620 18:43:16.664"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:#collapse1 a[href*='catalog/manufacturer']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:16.665" level="INFO">Clicking element 'css:#collapse1 a[href*='catalog/manufacturer']'.</msg>
+<status status="PASS" starttime="20200620 18:43:16.664" endtime="20200620 18:43:17.168"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css:h1</arg>
+<arg>Производители</arg>
+</arguments>
+<msg timestamp="20200620 18:43:17.169" level="INFO">Verifying element 'css:h1' contains exact text 'Производители'.</msg>
+<status status="PASS" starttime="20200620 18:43:17.168" endtime="20200620 18:43:17.207"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:16.435" endtime="20200620 18:43:17.207"></status>
+</kw>
+<kw name="Добавить производителя" library="opencart_keywords">
+<arguments>
+<arg>Tesla</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[data-original-title='Добавить']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:17.209" level="INFO">Clicking element 'css:a[data-original-title='Добавить']'.</msg>
+<status status="PASS" starttime="20200620 18:43:17.208" endtime="20200620 18:43:17.648"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:#input-name</arg>
+<arg>${NAME}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:17.648" level="INFO">Typing text 'Tesla' into text field 'css:#input-name'.</msg>
+<status status="PASS" starttime="20200620 18:43:17.648" endtime="20200620 18:43:17.788"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[data-original-title='Сохранить']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:17.788" level="INFO">Clicking element 'css:button[data-original-title='Сохранить']'.</msg>
+<status status="PASS" starttime="20200620 18:43:17.788" endtime="20200620 18:43:18.157"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:17.208" endtime="20200620 18:43:18.158"></status>
+</kw>
+<kw name="Проверить что у пользователя нет прав на добавление производителя" library="opencart_keywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>css:.alert-danger</arg>
+</arguments>
+<msg timestamp="20200620 18:43:18.217" level="INFO">Element 'css:.alert-danger' is displayed.</msg>
+<status status="PASS" starttime="20200620 18:43:18.160" endtime="20200620 18:43:18.217"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:18.158" endtime="20200620 18:43:18.218"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:18.220" endtime="20200620 18:43:18.376"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:18.219" endtime="20200620 18:43:18.376"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:11.412" endtime="20200620 18:43:18.377" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Admin can log out">
+<kw name="Открыть административную часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ADMIN_URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:18.382" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/admin/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:18.382" endtime="20200620 18:43:22.425"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Авторизация</arg>
+</arguments>
+<msg timestamp="20200620 18:43:22.436" level="INFO">Page title is 'Авторизация'.</msg>
+<status status="PASS" starttime="20200620 18:43:22.426" endtime="20200620 18:43:22.436"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:18.381" endtime="20200620 18:43:22.436"></status>
+</kw>
+<kw name="Авторизоваться в административной части опенкарт" library="opencart_keywords">
+<arguments>
+<arg>demo</arg>
+<arg>demo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-username</arg>
+<arg>${LOGIN}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:22.438" level="INFO">Typing text 'demo' into text field 'css:input#input-username'.</msg>
+<status status="PASS" starttime="20200620 18:43:22.438" endtime="20200620 18:43:22.632"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input#input-password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:22.632" level="INFO">Typing text 'demo' into text field 'css:input#input-password'.</msg>
+<status status="PASS" starttime="20200620 18:43:22.632" endtime="20200620 18:43:22.761"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:22.762" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200620 18:43:22.761" endtime="20200620 18:43:23.397"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:22.437" endtime="20200620 18:43:23.398"></status>
+</kw>
+<kw name="Разлогиниться" library="opencart_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[href*='common/logout']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:23.400" level="INFO">Clicking element 'css:a[href*='common/logout']'.</msg>
+<status status="PASS" starttime="20200620 18:43:23.399" endtime="20200620 18:43:23.948"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:23.398" endtime="20200620 18:43:23.948"></status>
+</kw>
+<kw name="Проверить что администратор не авторизован" library="opencart_keywords">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css:h1</arg>
+<arg>Введите логин и пароль</arg>
+</arguments>
+<msg timestamp="20200620 18:43:23.951" level="INFO">Verifying element 'css:h1' contains exact text 'Введите логин и пароль'.</msg>
+<status status="PASS" starttime="20200620 18:43:23.950" endtime="20200620 18:43:23.991"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:23.949" endtime="20200620 18:43:23.991"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:23.992" endtime="20200620 18:43:24.164"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:23.991" endtime="20200620 18:43:24.164"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:18.379" endtime="20200620 18:43:24.165" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200620 18:42:53.840" endtime="20200620 18:43:24.168"></status>
+</suite>
+<suite id="s1-s2" name="User Part Opencart" source="/Users/alex/Documents/OTUS_Alyona/otus-qa-course/robotframework/user_part_opencart.robot">
+<test id="s1-s2-t1" name="User can open Opencart in Chrome">
+<kw name="Открыть пользовательскую часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:24.191" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:24.191" endtime="20200620 18:43:28.026"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Your Store</arg>
+</arguments>
+<msg timestamp="20200620 18:43:28.042" level="INFO">Page title is 'Your Store'.</msg>
+<status status="PASS" starttime="20200620 18:43:28.027" endtime="20200620 18:43:28.043"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:24.190" endtime="20200620 18:43:28.044"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:28.046" endtime="20200620 18:43:28.197"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:28.045" endtime="20200620 18:43:28.197"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:24.189" endtime="20200620 18:43:28.198" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Verify featured block is not empty (main page)">
+<kw name="Открыть пользовательскую часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:28.202" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:28.201" endtime="20200620 18:43:32.337"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Your Store</arg>
+</arguments>
+<msg timestamp="20200620 18:43:32.360" level="INFO">Page title is 'Your Store'.</msg>
+<status status="PASS" starttime="20200620 18:43:32.338" endtime="20200620 18:43:32.360"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:28.200" endtime="20200620 18:43:32.361"></status>
+</kw>
+<kw name="Проверить что блок Featured не пустой" library="opencart_keywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>class:image</arg>
+</arguments>
+<msg timestamp="20200620 18:43:32.406" level="INFO">Element 'class:image' is displayed.</msg>
+<status status="PASS" starttime="20200620 18:43:32.362" endtime="20200620 18:43:32.406"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:32.361" endtime="20200620 18:43:32.406"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:32.407" endtime="20200620 18:43:32.557"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:32.407" endtime="20200620 18:43:32.557"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:28.199" endtime="20200620 18:43:32.558" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Add product to cart (product page)">
+<kw name="Открыть страницу товара" library="opencart_keywords">
+<arguments>
+<arg>41</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}?route=product/product&amp;product_id=${PRODUCT_ID}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:32.562" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/index.php?route=product/product&amp;product_id=41'.</msg>
+<status status="PASS" starttime="20200620 18:43:32.561" endtime="20200620 18:43:37.780"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:32.561" endtime="20200620 18:43:37.781"></status>
+</kw>
+<kw name="Добавить товар в корзину" library="opencart_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button#button-cart</arg>
+</arguments>
+<msg timestamp="20200620 18:43:37.785" level="INFO">Clicking element 'css:button#button-cart'.</msg>
+<status status="PASS" starttime="20200620 18:43:37.783" endtime="20200620 18:43:38.145"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:37.782" endtime="20200620 18:43:38.145"></status>
+</kw>
+<kw name="Проверить что в корзине есть этот товар" library="opencart_keywords">
+<arguments>
+<arg>41</arg>
+</arguments>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200620 18:43:38.147" endtime="20200620 18:43:38.153"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:.btn-inverse</arg>
+</arguments>
+<msg timestamp="20200620 18:43:38.154" level="INFO">Clicking element 'css:.btn-inverse'.</msg>
+<status status="PASS" starttime="20200620 18:43:38.153" endtime="20200620 18:43:38.299"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>css:tr&gt;*:nth-child(2)&gt;a[href*='product_id=${PRODUCT_ID}']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:38.340" level="INFO">Element 'css:tr&gt;*:nth-child(2)&gt;a[href*='product_id=41']' is displayed.</msg>
+<status status="PASS" starttime="20200620 18:43:38.300" endtime="20200620 18:43:38.340"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:38.146" endtime="20200620 18:43:38.340"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:38.342" endtime="20200620 18:43:38.500"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:38.341" endtime="20200620 18:43:38.501"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:32.560" endtime="20200620 18:43:38.504" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Add product to comparison (product page)">
+<kw name="Открыть страницу товара" library="opencart_keywords">
+<arguments>
+<arg>31</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}?route=product/product&amp;product_id=${PRODUCT_ID}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:38.508" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/index.php?route=product/product&amp;product_id=31'.</msg>
+<status status="PASS" starttime="20200620 18:43:38.508" endtime="20200620 18:43:42.671"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:38.507" endtime="20200620 18:43:42.672"></status>
+</kw>
+<kw name="Добавить товар в сравнение товаров" library="opencart_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[data-original-title="Compare this Product"]</arg>
+</arguments>
+<msg timestamp="20200620 18:43:42.676" level="INFO">Clicking element 'css:button[data-original-title="Compare this Product"]'.</msg>
+<status status="PASS" starttime="20200620 18:43:42.675" endtime="20200620 18:43:42.960"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:42.673" endtime="20200620 18:43:42.960"></status>
+</kw>
+<kw name="Перейти на страницу сравнения товаров" library="opencart_keywords">
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200620 18:43:42.961" endtime="20200620 18:43:42.964"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>partial link:product comparison</arg>
+</arguments>
+<msg timestamp="20200620 18:43:42.964" level="INFO">Clicking element 'partial link:product comparison'.</msg>
+<status status="PASS" starttime="20200620 18:43:42.964" endtime="20200620 18:43:43.719"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:42.961" endtime="20200620 18:43:43.719"></status>
+</kw>
+<kw name="Проверить что товар добавлен на страницу сравнения товаров" library="opencart_keywords">
+<arguments>
+<arg>31</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>css:tr&gt;*:nth-child(2)&gt;a[href*='product_id=${PRODUCT_ID}']</arg>
+</arguments>
+<msg timestamp="20200620 18:43:43.843" level="INFO">Element 'css:tr&gt;*:nth-child(2)&gt;a[href*='product_id=31']' is displayed.</msg>
+<status status="PASS" starttime="20200620 18:43:43.721" endtime="20200620 18:43:43.843"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:43.720" endtime="20200620 18:43:43.844"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:43.845" endtime="20200620 18:43:43.999"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:43.844" endtime="20200620 18:43:44.000"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:38.505" endtime="20200620 18:43:44.000" critical="yes"></status>
+</test>
+<test id="s1-s2-t5" name="Verify search (main page)">
+<kw name="Открыть пользовательскую часть опенкарт" library="opencart_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200620 18:43:44.005" level="INFO">Opening browser 'Chrome' to base url 'http://demo-opencart.ru/index.php'.</msg>
+<status status="PASS" starttime="20200620 18:43:44.005" endtime="20200620 18:43:47.994"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Your Store</arg>
+</arguments>
+<msg timestamp="20200620 18:43:48.006" level="INFO">Page title is 'Your Store'.</msg>
+<status status="PASS" starttime="20200620 18:43:47.995" endtime="20200620 18:43:48.007"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:44.004" endtime="20200620 18:43:48.007"></status>
+</kw>
+<kw name="Ввести текст в строку поиска и нажать Enter" library="opencart_keywords">
+<arguments>
+<arg>iphone</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:#search&gt;input[name=search]</arg>
+<arg>${TEXT}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:48.009" level="INFO">Typing text 'iphone' into text field 'css:#search&gt;input[name=search]'.</msg>
+<status status="PASS" starttime="20200620 18:43:48.008" endtime="20200620 18:43:48.218"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>css:#search&gt;input[name=search]</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20200620 18:43:48.220" level="INFO">Sending key(s) ('RETURN',) to css:#search&gt;input[name=search] element.</msg>
+<msg timestamp="20200620 18:43:48.516" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20200620 18:43:48.517" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20200620 18:43:48.218" endtime="20200620 18:43:48.866"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:48.008" endtime="20200620 18:43:48.867"></status>
+</kw>
+<kw name="Проверить что заголовок страницы результатов поиска содержит строку поиска" library="opencart_keywords">
+<arguments>
+<arg>iphone</arg>
+</arguments>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css:#content&gt;h1</arg>
+<arg>Search - ${TEXT}</arg>
+</arguments>
+<msg timestamp="20200620 18:43:48.868" level="INFO">Verifying element 'css:#content&gt;h1' contains exact text 'Search - iphone'.</msg>
+<status status="PASS" starttime="20200620 18:43:48.868" endtime="20200620 18:43:48.911"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:48.867" endtime="20200620 18:43:48.912"></status>
+</kw>
+<kw name="Закрыть браузер" library="opencart_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200620 18:43:48.913" endtime="20200620 18:43:49.070"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:48.912" endtime="20200620 18:43:49.071"></status>
+</kw>
+<status status="PASS" starttime="20200620 18:43:44.002" endtime="20200620 18:43:49.071" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200620 18:43:24.178" endtime="20200620 18:43:49.076"></status>
+</suite>
+<status status="PASS" starttime="20200620 18:42:53.795" endtime="20200620 18:43:49.087"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0">Critical Tests</stat>
+<stat pass="10" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="5" fail="0" id="s1-s1" name="Adm Part Opencart">Robotframework.Adm Part Opencart</stat>
+<stat pass="5" fail="0" id="s1-s2" name="User Part Opencart">Robotframework.User Part Opencart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
